@@ -33,6 +33,6 @@ Mitigation Strategy for above risks
 
 Development method: The team will use scrum to develop the website. Sprints will typically last 2 weeks and will consist of developing a small working portion of our website. What the team accomplishes in each sprint will depend on the material learned in class. The team will update Trello as the project progresses. The team will also take turns in the Scrum Master role to allow for equal learning opportunities.
 
-Project Tracking Software link: https://trello.com/w/fantasticfour82/members?utm_source=eval-email&utm_medium=email&utm_campaign=team-invite
+Project Tracking Software link: https://trello.com/w/fantasticfour82
 
 
