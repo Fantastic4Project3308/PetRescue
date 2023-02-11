@@ -11,7 +11,7 @@ Team members:
 * Mayra Weidner - MYWeidner, mawe7753@colorado.edu
 * Brittany Bilotti - brbi1248 - brbi1248@colorado.edu
 * Mayumi Shimobe - Mayumi-GT - mash8545@colorado.edu
-* Zack Cheng - GitHub name - tsch3115@colorado.edu
+* Zack Cheng - zacktcheng - tsch3115@colorado.edu
 
 Day/Time/TimeZone for the scheduled team weekly meeting (30 minutes via Zoom): Friday 12MST
 
