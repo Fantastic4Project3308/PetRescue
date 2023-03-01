@@ -1,18 +1,18 @@
-#This is a script to scrape each pet html page for attributes: breed, age, gender, color, if spayed, size
+#This is a script to scrape each pet html page for attributes: name, breed, age, gender, color, size
 
 if [[ -f $1 ]]; then
-    echo -e "Breed \n" > "$1"_attributes.txt
-    grep "text: breed" $1 >> "$1"_attributes.txt
-    echo -e "Age \n" > "$1"_attributes.txt
-    grep "text: Age:" $1 >> "$1"_attributes.txt
-    echo -e "Gender \n" > "$1"_attributes.txt
-    grep "text: Gender:" $1  >> "$1"_attributes.txt
-    echo -e "Color \n" > "$1"_attributes.txt
-    grep "text: Color:" $1 >> "$1"_attributes.txt
-    echo -e "Spayed \n" > "$1"_attributes.txt
-    grep "text: spayedNeutered" $1 >> "$1"_attributes.txtx
-    echo -e "Size \n" > "$1"_attributes.txt
-    grep "text: size" $1 >> "$1"_attributes
+    echo -e "Name:" > "$1"_attributes.txt
+    grep -o -P '(?<="lbName">).*(?=</span>)' $1 >> "$1"_attributes.txt
+    echo -e "Breed:" >> "$1"_attributes.txt
+    grep -o -P '(?<="lbBreed">).*(?=</span>)' $1 >> "$1"_attributes.txt
+    echo -e "Age:" >> "$1"_attributes.txt
+    grep -o -P '(?<="lbAge">).*(?=</span>)' $1 >> "$1"_attributes.txt
+    echo -e "Gender:" >> "$1"_attributes.txt
+    grep -o -P '(?<="lbSex">).*(?=</span>)' $1 >> "$1"_attributes.txt
+    echo -e "Color:" >> "$1"_attributes.txt
+    grep -o -P '(?<="lblColor">).*(?=</span>)' $1 >> "$1"_attributes.txt
+    echo -e "Size:" >> "$1"_attributes.txt
+    grep -o -P '(?<="lblSize">).*(?=</span>)' $1 >> "$1"_attributes.txt
     
 else
     echo "file does not exist"

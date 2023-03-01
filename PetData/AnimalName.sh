@@ -18,8 +18,8 @@ if [[ -f $1 ]]; then
     #grep -o -P '(?<=href=").*(?=" >)'| wget $line | grep -o -P '(?<=css=" >).*(?=</a>)'  
     
     done < $file 
-    
-
+    https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails.aspx?id=29096204&css=
+ wget -O dummy_website https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails.aspx?id=29096204&css=
 fi
 
 
