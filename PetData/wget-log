@@ -1,0 +1,13 @@
+--2023-03-01 00:03:56--  https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails.aspx?id=29096204
+Resolving ws.petango.com (ws.petango.com)... 52.170.169.74
+Connecting to ws.petango.com (ws.petango.com)|52.170.169.74|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Cookie coming from ws.petango.com attempted to set domain to wspetangoprd2.azurewebsites.net
+Cookie coming from ws.petango.com attempted to set domain to wspetangoprd2.azurewebsites.net
+Length: 15349 (15K) [text/html]
+Saving to: ‘dummy_website’
+
+dummy_website                   0%[                                               ]       0  --.-KB/s               dummy_website                 100%[==============================================>]  14.99K  --.-KB/s    in 0s      
+
+2023-03-01 00:03:57 (507 MB/s) - ‘dummy_website’ saved [15349/15349]
+
