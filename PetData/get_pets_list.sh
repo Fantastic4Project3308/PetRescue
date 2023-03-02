@@ -1,10 +1,6 @@
-if [ -z "$1" ]; then
-    echo "Must specify the parameter, either \"cat\" or \"dog.\""
-    echo "Exit get_names.sh"
-    exit
-elif [ $(echo "$1" | grep -E -io "cat|dog" | wc -l) -ne 1 ]; then
-    echo "Input parameter is neither \"cat\" nor \"dog\""
-    echo "Exit get_names.sh"
+if [ -z "$1" -o $(echo "$1" | grep -E -io "cat|dog" | wc -l) -ne 1 ]; then
+    echo "Must specify one input parameter, it can be either \"cat\" or \"dog\"."
+    echo "Exit get_pets_list.sh"
     exit
 fi
 
