@@ -22,4 +22,3 @@ grep "list-animal-name" $temp_html > $name_id_subURL_list
 rm $temp_html
 echo "Number of $1s' name-id-subURL extracted: $(cat $1_name_id_subURL_list.txt | wc -l)"
 echo "Extraction completed."
-
