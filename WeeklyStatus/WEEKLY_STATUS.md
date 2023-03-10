@@ -79,6 +79,13 @@ First team meeeting
 #### Frontend
 * Continue designing webpages and how to hyperlink them together (use wix.com if possible)
 * Work toward completion of milestone 4
+* 
 
 
+# Week 5
+#### Frontend
+* Created a layout design on wix as inspiration
+* Created mock up of webpages: home, dog, cat, about us, animal bio, buttons, animal adoption form, and how these pages and buttons would link together
+#### Backend
+* Created data from cat and dog html and generated ~ 50 files in cat and dog data folders
 
