@@ -86,17 +86,18 @@ First team meeeting
 #### Frontend
 * Created a layout design on wix as inspiration
 * Created mock up of webpages: home, dog, cat, about us, animal bio, buttons, animal adoption form, and how these pages and buttons would link together
-* Worked on project milestone 4
+* Worked on project milestone 4 and created parameters for pages
 <br>
 <img src="Wk5_FrontEnd.png" alt="Wk5FrontEnd" WIDTH=50% ALIGH="LEFT"/>
+<br>
 <br>
 #### Backend
 * Created data from cat and dog html and generated ~ 50 files in cat and dog data folders
 
 
 #### Goals for next week
-* Start looking into sql data entry of cat and dog data files
-* Start on html homepage design
+* Finalize sprint
+* Discuss next sprint goals for the following week
 
 ### Obstacles
 * Front and backend did not experience obstacles this week
