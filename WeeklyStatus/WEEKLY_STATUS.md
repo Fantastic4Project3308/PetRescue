@@ -86,6 +86,9 @@ First team meeeting
 #### Frontend
 * Created a layout design on wix as inspiration
 * Created mock up of webpages: home, dog, cat, about us, animal bio, buttons, animal adoption form, and how these pages and buttons would link together
+<br>
+<img src="Wk5_FrontEnd.png" alt="Wk5FrontEnd" WIDTH=50% ALIGH="LEFT"/>
+<br>
 #### Backend
 * Created data from cat and dog html and generated ~ 50 files in cat and dog data folders
 
