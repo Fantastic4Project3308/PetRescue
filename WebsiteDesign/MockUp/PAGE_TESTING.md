@@ -12,16 +12,16 @@ The homepage shows a banner with our company logo, FurEver Pet. Below the banner
 <figure width=100%></figure>
 
 ### Parameters needed for page
-* Home page parameter
+* Home page parameter: 
 @app.route('/')
 
-* Dog page parameter
+* Dog page parameter: 
 @app.route('/dog')
 
-* Cat page parameter
+* Cat page parameter: 
 @app.route('/cat')
 
-* About Us page parameter
+* About Us page parameter: 
 @app.route('/aboutus')
 
 ### Data needed to render the page
@@ -29,29 +29,29 @@ The homepage shows a banner with our company logo, FurEver Pet. Below the banner
 * Picture for logo
 
 ### Link destination for the page
-* Company logo and banner
+* Company logo and banner:
 When a user clicks on this banner on any page, it will link back to the homepage.
 
-* Dog button
+* Dog button:
 When a user clicks on the dog button, it will link to the dog page. 
 
-* Cat button
+* Cat button:
 When a user clicks on the cat button, it will link to the cat page. 
 
-* About Us button
+* About Us button:
 When a user clicks on the About Us, it will link to the company profile page.
 
 ### List of tests for verifying the rendering of the page
-* Company logo and banner
+* Company logo and banner:
 Clicking on the logo should return the user to the home page. If the user is already on the home page, nothing will happen.
 
-* Dog button
+* Dog button:
 Clicking on the dog button should route the user to the dog page which shows the available dogs.
 
-* Cat button
+* Cat button:
 Clicking on the cat button should route the user to the dog page which shows the available cats.
 
-* About Us button
+* About Us button:
 Clicking on the About Us button should route the user to the company profile page.
 
 _______________________________________________________________________
@@ -68,13 +68,13 @@ The dog page shows a banner with our company logo, FurEver Pet. Below the banner
 <figure width=100%></figure>
 
 ### Parameters needed for page
-* Home page parameter
+* Home page parameter: 
 @app.route('/')
 
-* Dog page parameter
+* Dog page parameter: 
 @app.route('/dog')
 
-* Dog profile page parameter
+* Dog profile page parameter: 
 @app.route('/dog/profile/animal_ID')
 
 ### Data needed to render the page
@@ -83,24 +83,24 @@ The dog page shows a banner with our company logo, FurEver Pet. Below the banner
 * Picture for logo
 
 ### Link destination for the page
-* Company logo and banner
+* Company logo and banner:
 When a user clicks on this banner on any page, it will link back to the homepage.
 
-* Search bar and button
-When a user filters for the dog they want and press search button, it will narrow down the list of available dogs on the page
+* Search bar and button: 
+When a user filters for the dog they want and presses the search button, it will narrow down the list of available dogs on the page.
 
-* Dog selection
-When a user decides on the dog they will click on a picture and it will direct them to the dog's profile page
+* Dog selection: 
+When a user decides on the dog they will click on a picture and it will direct them to the dog's profile page.
 
 ### List of tests for verifying the rendering of the page
-* Company logo and banner
+* Company logo and banner: 
 Clicking on the logo should return the user to the home page.
 
-* Search bar and button
-To verify that criteria was selected, we will check that the name of the dogs that fit the criteria will show up. For example, Lola is a female puppy with brown hair. Lola will show up when we search for this criteria.
+* Search bar and button: 
+To verify that criteria was selected, we will check that the name of the dog that fits the criteria will show up. For example, Lola is a female puppy with brown hair. Lola will show up when we search for this criteria.
     
-* Dog picture
-When a user clicks on a dog picture, a new tab will open with the dog profile. Everytime a user selects a new dog, another tab will open. By opening a new tab everytime a new dog is selected, we can keep our search variables.
+* Dog picture:
+When a user clicks on a dog picture, a new tab will open with the dog profile. Everytime a user selects a new dog, another tab will open. By opening a new tab everytime a new dog is selected, we can keep our search variables on the dog search page. 
 
     
 _______________________________________________________________________
@@ -110,20 +110,20 @@ _______________________________________________________________________
 * Cat side search bars
 * Available cat buttons
 
-The  page shows a banner with our company logo, FurEver Pet. Below the banner on the left hand side, there is a search section with the options breed, age, size, gender, and color as search variables. Under each search variable there is a drop list. Below the search section, there will be a search button to complete the search request. On the right hand side of the search section, there will be pictures of all available cats that can be reduced as a result of the search section criteria. Each cat image is a link to the cat profile page.
+The  page shows a banner with our company logo, FurEver Pet. Below the banner on the left hand side, there is a search section with the options breed, age, size, gender, and color as search variables. Under each search variable there is a drop down list. Below the search section, there will be a search button to complete the search request. On the right hand side of the search section, there will be pictures of all available cats that can be reduced as a result of the search section criteria. Each cat image is a link to the cat profile page.
 
 <figure width=100%>
 <img src="CatPage.pdf" alt="CatPage" WIDTH=50%/></figure>
 <figure width=100%></figure>
 
 ### Parameters needed for page
-* Home page parameter
+* Home page parameter: 
 @app.route('/')
     
-* Cat page parameter
+* Cat page parameter:
 @app.route('/cat')
 
-* Cat profile page parameter
+* Cat profile page parameter:
 @app.route('/cat/profile/animal_ID')
 
 ### Data needed to render the page
@@ -132,24 +132,24 @@ The  page shows a banner with our company logo, FurEver Pet. Below the banner on
 * Picture for logo
 
 ### Link destination for the page
-* Company logo and banner
+* Company logo and banner: 
 When a user clicks on this banner on any page, it will link back to the homepage.
 
-* Search bar and button
-When a user filters for the cat they want and press search button, it will narrow down the list of available cats on the page
+* Search bar and button: 
+When a user filters for the cat they want and presses the search button, it will narrow down the list of available cats on the page.
 
-* Cat selection
-When a user decides on the cat they will click on a picture and it will direct to the cat's profile page
+* Cat selection:
+When a user decides on a cat they will click on a picture and it will direct to the cat's profile page.
 
 ### List of tests for verifying the rendering of the page
-* Company logo and banner
+* Company logo and banner:
 Clicking on the logo should return the user to the home page.
 
-* Search bar and button
-To verify that criteria was selected, we will check that the name of the cats that fit the criteria will show up. For example, Tony is a male cat with white hair. Tony will show up when we search for this criteria.
+* Search bar and button:
+To verify that criteria was selected, we will check that the name of the cat that fits the criteria will show up. For example, Tony is a male cat with white hair. Tony will show up when we search for this criteria.
     
-* Cat picture
-When a user clicks on a cat picture, a new tab will open with the cat profile. Everytime a user selects a new cat, another tab will open. By opening a new tab everytime a new cat is selected, we can keep our search variables.
+* Cat picture: 
+When a user clicks on a cat picture, a new tab will open with the cat profile. Everytime a user selects a new cat, another tab will open. By opening a new tab everytime a new cat is selected, we can keep our search variables on the cat search page.
     
 _______________________________________________________________________
 # Dog or Cat profile page (page layout will look the same)
@@ -159,17 +159,17 @@ _______________________________________________________________________
 * Profile section with: name, breed, age, gender, size, color, background, and shelter
 * Adopt now button
 
-The page shows a photo of the desired dog or cat, a breif description of the animal including name, breed, age, gender, size, color, background, and shelter where the animal currently lives. The page also includes an "Adopt Now" link.
+The page shows a photo of the desired dog or cat, a brief description of the animal including the name, breed, age, gender, size, color, background, and shelter where the animal currently lives. The page also includes an "Adopt Now" link.
 
 <figure width=100%>
 <img src="AnimalBio.pdf" alt="AnimalBio" WIDTH=50%/></figure>
 <figure width=100%></figure>
 
 ### Parameters needed for page
-* Home page parameter
+* Home page parameter:
 @app.route('/')
     
-* Adopt now page parameter
+* Adopt now page parameter:
     * @app.route('/dog/profile/animal_ID/adoptnow')
     * @app.route('/cat/profile/animal_ID/adoptnow')
     
@@ -179,17 +179,17 @@ The page shows a photo of the desired dog or cat, a breif description of the ani
 * Picture for logo
 
 ### Link destination for the page
-* Company logo and banner
+* Company logo and banner:
 When a user clicks on this banner on any page, it will link back to the homepage.
 
-* Adopt now button
-When a user clicks on the adopt now button, the user will be directed to an adoption form page where the user will need to fill out the application.
+* Adopt now button:
+When a user clicks on the adopt now button, the user will be directed to an adoption form page where the user can fill out the application.
 
 ### List of tests for verifying the rendering of the page
-* Company logo and banner
+* Company logo and banner:
 Clicking on the logo should return the user to the home page.
 
-* Adopt now button
+* Adopt now button:
 Clicking on the adopt now button will take the user to a pdf adoption form.
 
 _______________________________________________________________________
