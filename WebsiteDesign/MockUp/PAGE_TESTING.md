@@ -190,7 +190,7 @@ When a user clicks on the adopt now button, the user will be directed to an adop
 Clicking on the logo should return the user to the home page.
 
 * Adopt now button:
-Clicking on the adopt now button will take the user to a pdf adoption form.
+Clicking on the adopt now button will take the user to an adoption form (in text).
 
 _______________________________________________________________________
 # Adoption page
@@ -198,17 +198,17 @@ _______________________________________________________________________
 * Company logo and banner
 * Adoption form text
 
-The adoption page shows a form that a user will need to fill out in order to be considered as a potential adopter for the desired cat or dog.
+The adoption page shows a text form that a user will need to fill out in order to be considered as a potential adopter for the desired cat or dog.
 
 <figure width=100%>
 <img src="AdoptionForm.pdf" alt="AdoptionForm" WIDTH=50%/></figure>
 <figure width=100%></figure>
 
 ### Parameters needed for page
-* Home page parameter
+* Home page parameter:
 @app.route('/')
     
-* Adopt now page parameter
+* Adopt now page parameter:
     * @app.route('/dog/profile/animal_ID/adoptnow')
     * @app.route('/cat/profile/animal_ID/adoptnow')
     
@@ -220,15 +220,12 @@ The adoption page shows a form that a user will need to fill out in order to be 
 * Company logo and banner
 When a user clicks on this banner on any page, it will link back to the homepage.
 
-* Mail to form method link
-This will be a link to an email address.
-
 ### List of tests for verifying the rendering of the page
 * Company logo and banner
 Clicking on the logo should return the user to the home page.
+* Text: 
+Ensure text is rendered on page.
 
-* Mail to form method link
-When the user clicks on the link, it will open a new email.
 
 _______________________________________________________________________
 # About Us page
@@ -246,10 +243,10 @@ The above bullets will be text, each surrounded by a solid border.
 <figure width=100%></figure>
 
 ### Parameters needed for page
-* Home page parameter
+* Home page parameter:
 @app.route('/')
     
-* About Us page parameter
+* About Us page parameter:
 @app.route('/aboutus')
     
 ### Data needed to render the page
@@ -257,20 +254,20 @@ The above bullets will be text, each surrounded by a solid border.
 * Team created text
 
 ### Link destination for the page
-* Company logo and banner
+* Company logo and banner:
 When a user clicks on this banner on any page, it will link back to the homepage.
 
 ### List of tests for verifying the rendering of the page
-* Company logo and banner
+* Company logo and banner:
 Clicking on the logo should return the user to the home page.
 
-* Text
+* Text:
 Ensure text is rendered on page.
 
 _______________________________________________________________________
 # Demo on how pages will link together
 ### Click on cat or dog button on homepage
-When a user clicks on the cat button on the homepage, the user will be directed to the available cat page. On this page the user will filter the data for available cats. A user can then click on the desired cat photo which will route user's to the cat's profile page. If a user is interested in adopting the cat, then the user can click on the Adopt Now button. From here, the user is routed to the adoption form page where the user will need to fill out the form.
+When a user clicks on the cat button on the homepage, the user will be directed to the available cat page. On this page the user will filter the data for available cats. A user can then click on the desired cat photo which will route the user to the cat's profile page. If a user is interested in adopting the cat, then the user can click on the Adopt Now button. From here, the user is routed to the adoption form page where the user can fill out the form.
 
 <figure width=100%>
 <img src="ClickOnCatButton.pdf" alt="ClickOnCatButton" WIDTH=50%/></figure>
