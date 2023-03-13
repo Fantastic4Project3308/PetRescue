@@ -1,0 +1,15 @@
+Description: 
+Hello, my name is Nova! I enjoy walks and playing with my brother Cotton. I'm a friendly dog that loves to hangout!
+
+Breed:
+Border Collie/Mix
+Age:
+2 years 6 days
+Gender:
+Male
+Color:
+Black/White
+Size:
+Large
+Location:
+Dog Kennels

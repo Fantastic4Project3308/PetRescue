@@ -1,0 +1,15 @@
+Description: 
+Hello, my name is Cotton! I enjoy walks and playing with my sister Nova. I'm a friendly dog that loves to hangout!
+
+Breed:
+Alaskan Husky/Mix
+Age:
+3 years 6 days
+Gender:
+Male
+Color:
+White
+Size:
+Large
+Location:
+Dog Kennels
