@@ -83,6 +83,9 @@ First team meeeting
 
 
 # Week 5
+#### Backend
+* Created data from cat and dog html and generated ~ 50 files in cat and dog data folders
+
 #### Frontend
 * Created a layout design on wix as inspiration
 * Created mock up of webpages: home, dog, cat, about us, animal bio, buttons, animal adoption form, and how these pages and buttons would link together
@@ -91,13 +94,35 @@ First team meeeting
 <img src="Wk5_FrontEnd.png" alt="Wk5FrontEnd" WIDTH=50% ALIGH="LEFT"/>
 <br>
 <br>
-#### Backend
-* Created data from cat and dog html and generated ~ 50 files in cat and dog data folders
-
 
 #### Goals for next week
 * Finalize sprint
 * Discuss next sprint goals for the following week
+
+### Obstacles
+* Front and backend did not experience obstacles this week
+
+# Week 6 (Start of new Sprint)
+Sprint was finalized and milestone 4 was completed. 
+
+This week, we discussed milestone 5 and decided that it will be completed during our 4/5 meeting as a team.
+
+We also discussed what we'd like to accomplish during this new sprint as detailed below. We expect to have this sprint completed by 4/7.
+#### Frontend
+* Create css and HTML pages. We split this task up between team members to allow for full team participation.
+<br>
+<img src="Wk6_FrontEnd.png" alt="Wk6FrontEnd" WIDTH=50% ALIGH="LEFT"/>
+<br>
+<br>
+#### Backend
+* Create files to rrender web pages with flask.
+<br>
+<img src="Wk6_BackEnd.png" alt="Wk6BackEnd" WIDTH=50% ALIGH="LEFT"/>
+<br>
+<br>
+
+#### Goals for next week
+* Continue working on surrent sprint
 
 ### Obstacles
 * Front and backend did not experience obstacles this week
