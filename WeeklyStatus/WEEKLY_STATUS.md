@@ -117,12 +117,29 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 #### Backend
 * Create files to rrender web pages with flask.
 <br>
-<img src="Wk6_BackEnd.png" alt="Wk6BackEnd" WIDTH=50% ALIGH="LEFT"/>
+<img src="Wk7_BackEnd.png" alt="Wk7BackEnd" WIDTH=50% ALIGH="LEFT"/>
 <br>
 <br>
 
 #### Goals for next week
-* Continue working on surrent sprint
+* Continue working on current sprint
+
+### Obstacles
+* Front and backend did not experience obstacles this week
+
+# Week 7
+#### Backend
+* Continue working on current sprint.
+* Created Furever.py file and necessary routes.
+
+#### Frontend
+* Created draft html pages for Homepage, AdaptionForm, AboutUs, CatPage, DogPage
+* Discussed how html, css, and javascript files would be structured for the website.
+
+#### Goals for next week
+* Discuss and complete Milestone 5 on Wednesday April 5th
+* Continue working on the html drafts and backend
+* Work together on css and other files on April 7th 2023.
 
 ### Obstacles
 * Front and backend did not experience obstacles this week
