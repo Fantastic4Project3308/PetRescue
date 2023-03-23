@@ -12,32 +12,39 @@ prefix.use_PrefixMiddleware(app)
 
 # test route to show prefix settings
 @app.route('/prefix_url')  
+def prefix_url():
+    return 'The URL for this page is {}'.format(url_for('prefix_url'))
 #homepage
 @app.route('/')
+def homepage():
+    return render_template('Homepage.html')
 #about us
 @app.route('/aboutus')
+def aboutus():
+    return render_template('AboutUs.html')
 #adoption form
 @app.route('/adoptionform')
+def adoptionform():
+    return render_template('AdoptionForm.html')
 #cat page
 @app.route('/cats')
+def catpage():
+    return render_template('CatPage.html')
 #dog page
 @app.route('/dogs')
+def dogpage():
+    return render_template('DogPage.html')
 # 5 ids for dogs page 
-@app.route('/36636186')
-@app.route('/42904054')
-@app.route('/43078721')
-@app.route('/45447002')
-@app.route('/48818187')
-# 5 ids for cat page 
-@app.route('/51289678')
-@app.route('/52058185')
-@app.route('/52072231')
-@app.route('/52106194')
-@app.route('/52167059')
-
+# @app.route('/36636186')
+# @app.route('/42904054')
+# @app.route('/43078721')
+# @app.route('/45447002')
+# @app.route('/48818187')
+# # 5 ids for cat page 
+# @app.route('/51289678')
+# @app.route('/52058185')
+# @app.route('/52072231')
+# @app.route('/52106194')
+# @app.route('/52167059')
 ###############################################################################
 # main driver function
-if __name__ == '__main__':
-    # run() method of Flask class runs the application 
-    # on the local development server using port 3308 instead of port 5000.
-    app.run(host='0.0.0.0', port=3308)
