@@ -153,7 +153,7 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 
 # Week 12
 #### Frontend
-* N/A
+* Will be updated on 04/07/2023
 <br>
 <br>
 
@@ -165,7 +165,7 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 <br>
 
 #### Goals for next week
-* 
+* Will be updated on 04/07/2023
 
 ### Obstacles
-* 
+* Will be updated on 04/07/2023
