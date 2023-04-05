@@ -153,8 +153,10 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 
 # Week 12
 #### Frontend
-* Will be updated on 04/07/2023
+* Completed/ work-in-progress html pages of Homepage, AdaptionForm, AboutUs, CatPage, and DogPage
+* Discussed how html, css, and javascript files would be structured for the website.
 <br>
+<img src="Wk7_FrontEnd.png" alt="Wk7FrontEnd" WIDTH=50% ALIGH="LEFT"/>
 <br>
 
 #### Backend
@@ -165,7 +167,8 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 <br>
 
 #### Goals for next week
-* Will be updated on 04/07/2023
+* Continue working on the html drafts and backend
+* Work together on css and other files on April 7th 2023.
 
 ### Obstacles
-* Will be updated on 04/07/2023
+* 
