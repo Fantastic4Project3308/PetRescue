@@ -151,3 +151,23 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 ### Obstacles
 * Front and backend did not experience obstacles this week
 
+# Week 12
+#### Frontend
+* N/A
+<br>
+<img src="Wk7_FrontEnd.png" alt="Wk7FrontEnd" WIDTH=50% ALIGH="LEFT"/>
+<br>
+
+#### Backend
+* Worked out and uploaded the SQL Design markdown file onto the repo. [SQL_TESTING.md](https://github.com/Fantastic4Project3308/PetRescue/blob/main/SQL_TESTING.md).
+<br>
+<img src="sql_design.JPG" alt="Wk12BackEnd" WIDTH=50% ALIGH="LEFT"/>
+<br>
+<br>
+
+#### Goals for next week
+* 
+* 
+
+### Obstacles
+* 
