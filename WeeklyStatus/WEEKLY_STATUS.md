@@ -125,7 +125,7 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 * Continue working on current sprint
 
 ### Obstacles
-* Front and backend did not experience obstacles this week
+* Frontend and backend did not experience obstacles this week
 
 # Week 7
 #### Frontend
@@ -153,11 +153,7 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 
 # Week 12
 #### Frontend
-* Completed/ work-in-progress html pages of Homepage, AdaptionForm, AboutUs, CatPage, and DogPage
-* Discussed how html, css, and javascript files would be structured for the website.
-<br>
-<img src="Wk7_FrontEnd.png" alt="Wk7FrontEnd" WIDTH=50% ALIGH="LEFT"/>
-<br>
+* Worked out the css themes/styles that applies to all webpages.
 
 #### Backend
 * Worked out and uploaded the SQL Design markdown file onto the repo. [SQL_TESTING.md](https://github.com/Fantastic4Project3308/PetRescue/blob/main/SQL_TESTING.md).
@@ -168,7 +164,6 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 
 #### Goals for next week
 * Continue working on the html drafts and backend
-* Work together on css and other files on April 7th 2023.
 
 ### Obstacles
-* 
+* Frontend and backend didn't have obstacles this week.
