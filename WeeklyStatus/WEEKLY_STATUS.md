@@ -155,7 +155,6 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 #### Frontend
 * N/A
 <br>
-<img src="Wk7_FrontEnd.png" alt="Wk7FrontEnd" WIDTH=50% ALIGH="LEFT"/>
 <br>
 
 #### Backend
@@ -166,7 +165,6 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 <br>
 
 #### Goals for next week
-* 
 * 
 
 ### Obstacles
