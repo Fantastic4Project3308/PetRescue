@@ -155,7 +155,7 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 #### Frontend
 * Worked on the css themes/styles that applies to webpages.
 <br>
-<img src="sql_design.JPG" alt="Wk12BackEnd" WIDTH=50% ALIGH="LEFT"/>
+<img src="Wk12_Frontend.png" alt="Wk12Frontend" WIDTH=50% ALIGH="LEFT"/>
 <br>
 <br>
 
@@ -166,7 +166,9 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 * Copy setup.cmd
 * Created routes with comments
 * Can be found in main tree
+* SQL_DESIGN.md
 <br>
+<img src="Wk12_Backend.png" alt="Wk12Backend" WIDTH=50% ALIGH="LEFT"/>
 <img src="sql_design.JPG" alt="Wk12BackEnd" WIDTH=50% ALIGH="LEFT"/>
 <br>
 <br>
