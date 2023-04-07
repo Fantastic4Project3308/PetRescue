@@ -184,5 +184,5 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 If there's time, Zack will work on Javascript to test button functionality.
 
 ### Obstacles
-* Try to figure out how to link the webpage through the <a> tag.
+* Try to figure out how to link the webpage through the `<a>` tag.
 * Try to fit the image inside the div.
