@@ -174,8 +174,8 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 #### Goals for next week
 * 4/7 - everyone will work on their individual webpages. We need to match the style to the template.html and add a link to the style.css file. Let team know when completed so Zack can do a final check. Complete this portion by 4/12. This will be the end of sprint 2.
 * Flask page -> Furever.py-->Brittany
-  -copy and paste prefix
-  -copy setup.cmd
+    copy and paste prefix
+* -copy setup.cmd
   -don't create virtual env in repo
   -creating routes-->Brittany
   -connecting those routes with functions that render the html pages-->Mayra || data/sql with js linking to pages -->next sprint
