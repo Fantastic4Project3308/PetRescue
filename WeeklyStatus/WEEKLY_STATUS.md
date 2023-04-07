@@ -153,17 +153,35 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 
 # Week 12
 #### Frontend
-* Worked out the css themes/styles that applies to all webpages.
+* Worked on the css themes/styles that applies to webpages.
+<br>
+<img src="sql_design.JPG" alt="Wk12BackEnd" WIDTH=50% ALIGH="LEFT"/>
+<br>
+<br>
 
 #### Backend
-* Worked out and uploaded the SQL Design markdown file onto the repo. [SQL_TESTING.md](https://github.com/Fantastic4Project3308/PetRescue/blob/main/SQL_TESTING.md).
+* Completed:
+  -Created flask page
+  -Copy and paste prefix
+  -Copy setup.cmd
+  -Created routes with comments
+    Can be found in main tree
 <br>
 <img src="sql_design.JPG" alt="Wk12BackEnd" WIDTH=50% ALIGH="LEFT"/>
 <br>
 <br>
 
 #### Goals for next week
-* Continue working on the html drafts and backend
+* 4/7 - everyone will work on their individual webpages. We need to match the style to the template.html and add a link to the style.css file. Let team know when completed so Zack can do a final check. Complete this portion by 4/12. This will be the end of sprint 2.
+* Flask page -> Furever.py-->Brittany
+  -copy and paste prefix
+  -copy setup.cmd
+  -don't create virtual env in repo
+  -creating routes-->Brittany
+  -connecting those routes with functions that render the html pages-->Mayra || data/sql with js linking to pages -->next sprint
+
+If there's time, Zack will work on Javascript to test button functionality.
 
 ### Obstacles
-* Frontend and backend didn't have obstacles this week.
+* Try to figure out how to link the webpage through the <a> tag.
+* Try to fit the image inside the div.
