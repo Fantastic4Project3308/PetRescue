@@ -1,38 +1,95 @@
 <!DOCTYPE>
 <html>
     <head>
-        <title>FurEver Pet</title>
+        <link href="style.css" type="text/css" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Furever Pet</title>
         <style>
             .dog {
                 float: left;
-                width:50%;
+                width:45%;
+                padding-top:15px;
+                padding-bottom:15px;
+                padding-left:15px;
+                padding-right:15px;
+            }
+            .dog a:hover {
+                cursor:pointer;
+                background-color:lightblue;
             }
             .cat { 
                 float: right;
-                width:50%;
+                width:45%;
+                padding-top:15px;
+                padding-bottom:15px;
+                padding-left:15px;
+                padding-right:15px;
+            }
+            .cat a:hover {
+                cursor:pointer;
+                background-color:lightblue;
+            }
+            .message{
+                text-align: center;
+            }
+            .img {
+                margin-left:auto;
+                margin-right:auto
+            }
+            .content{
+                max-width: 1080px;
+                margin: auto;
+                background: white;
+                padding: 10px;
             }
         </style>
     </head>
-    <header>
-        <h1 class="title">FurEver Pet</h1>
-    </header>
     <body>
-        <div class="dog">
-            <button type="button">    
-                <a href="ADD LINK"><img src="DogIcon.png" WIDTH=50%/></a>
-            </button>
-        </div>
-        <div class="cat">
-            <button type="button">    
-                <a href="ADD LINK"><img src="CatIcon.png" WIDTH=50%/></a>
-            </button>
-        </div>
-        <div class="AboutUs">
-            <button type="button">About Us</button>
-        </div>    
+        <header>
+            <h1 class="title">FurEver Pet <img src="logo.png" width=25px height=25px/></h1>
+            <nav>
+                <a class="nav-anchor" target="_blank">About Us</a>
+                <a class="nav-anchor" target="_blank">Cats</a>
+                <a class="nav-anchor" target="_blank">Dogs</a>
+                <a class="nav-anchor" target="_blank">Adoption Form</a>
+            </nav>
+        </header>
+        <main>
+            <!--
+            <aside>
+                <div class="aside-div">aside div 1</div>
+                <div class="aside-div">aside div 2</div>
+                <div class="aside-div">aside div 3</div>
+                <div class="aside-div">aside div 4</div>
+            </aside>
+            <section>
+                <article class="article-div">article-div 1</article>
+                <article class="article-div">article-div 2</article>
+                <article class="article-div">article-div 3</article>
+            </section>
+            -->
+            <div class="content">
+                <div class="message">
+                    <h2>Find your new best friend!</h2>
+                    <p>At FurEver Pet, we have a passion for rescuing animals and a deep desire to connect those with the same values with an animal in need.</p>
+                    <p>Browse pets from our network of shelters and rescues.</p> 
+                    <p>Click on the pet icons to get started.</p>
+                    <p></p>
+                <div class="dog">
+                <button type="button">    
+                    <a href="ADD LINK"><img src="DogIcon.png" WIDTH=50%/></a>
+                </button>
+                </div>
+                <div class="cat">
+                <button type="button">    
+                    <a href="ADD LINK"><img src="CatIcon.png" WIDTH=50%/></a>
+                </button>
+                </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <h4 class="title">©2023 FurEver.com All trademarks are owned by Fantastic Four.</h4>
+        </footer>
     </body>
 </html>
-
-
-# small description of company
-# update to match template html
