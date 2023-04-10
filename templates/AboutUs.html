@@ -1,103 +1,68 @@
 <!DOCTYPE>
 <html>
     <head>
+        <link href="style.css" type="text/css" rel="stylesheet"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Furever Pet</title>
         <style>
-            * {
-                box-sizing: border-box;
+            .dog {
+                float: left;
+                width:45%;
+                padding-top:15px;
+                padding-bottom:15px;
+                padding-left:15px;
+                padding-right:15px;
             }
-            
-            body {
-                height: 100vh;
-                width: 100vw;
-                display: flex;
-                flex-direction: column;
-                font-family: 'Lato', sans-serif;
-                margin: 0;
+            .dog a:hover {
+                cursor:pointer;
+                background-color:lightblue;
             }
-            
-            header {
-                justify-content: center;
-                background-color: #9F9F9F;
-                padding: 1rem;
+            .cat { 
+                float: right;
+                width:45%;
+                padding-top:15px;
+                padding-bottom:15px;
+                padding-left:15px;
+                padding-right:15px;
             }
-            
-            .title {
+            .cat a:hover {
+                cursor:pointer;
+                background-color:lightblue;
+            }
+            .message{
                 text-align: center;
-                background-color: #858585;
             }
-            
-            nav {
-                background-color: #F0F0F0;
-                display: flex;
-                justify-content: space-evenly;
+            .img {
+                margin-left:auto;
+                margin-right:auto
             }
-            
-            main {
-                padding: 1rem;
-                background-color: #B3DEBD;
-                overflow-y: auto;
-                display: flex;
-            }
-            
-            aside {  
-                width: 30vw;
-                background-color: #89CFF0;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                padding: 1rem;
-            }
-            
-            .aside-div {
-                background-color: #FFFFFF;
-                height: 150px;
-                margin: 1rem;
-            }
-            
-            section {
-                width: 70vw;
-                background-color: #89CFF0;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                padding: 1rem;
-            }
-            
-            .article-div {
-                background-color: #FFFFFF;
-                height: 300px;
-                margin: 1rem;
-            }
-            
-            footer {
-                #position: fixed;
-                #bottom: 0;
-                background-color: #99C5C6;
-                justify-content: center;
-                padding: 1rem;
-                width: 100%;
+            .content{
+                max-width: 1080px;
+                margin: auto;
+                background: white;
+                padding: 10px;
             }
         </style>
     </head>
     <body>
         <header>
-            <h1 class="title">This is the page title</h1>
+            <h1 class="title">FurEver Pet <img src="logo.png" width=25px height=25px/></h1>
             <nav>
-                <a class="nav-anchor" target="_blank">link 1</a>
-                <a class="nav-anchor" target="_blank">link 2</a>
-                <a class="nav-anchor" target="_blank">link 3</a>
-                <a class="nav-anchor" target="_blank">link 4</a>
+                <a class="nav-anchor" target="_blank">About Us</a>
+                <a class="nav-anchor" target="_blank">Cats</a>
+                <a class="nav-anchor" target="_blank">Dogs</a>
+                <a class="nav-anchor" target="_blank">Adoption Form</a>
             </nav>
         </header>
         <main>
+            <!--
             <aside>
                 <div class="aside-div">aside div 1</div>
                 <div class="aside-div">aside div 2</div>
                 <div class="aside-div">aside div 3</div>
                 <div class="aside-div">aside div 4</div>
             </aside>
+            -->
             <section>
                 <article class="article-div"><b>About Us: </b> <br>
                   FurEver Pet is a pet rescue and adoption website that was founded in February 2023 by a group of computer science students at the University of Colorado Boulder. The team, consisting of Myra, Britteny, Zach, and Mayumi, came together with a shared passion for technology and a desire to make a positive impact in the world.<br>
@@ -120,7 +85,7 @@ At FurEver Pet, we are committed to making a difference in the lives of animals 
             </section>
         </main>
         <footer>
-            <h1 class="title">This is the footer</h1>
+            <h4 class="title">©2023 FurEver.com All trademarks are owned by Fantastic Four.</h4>
         </footer>
     </body>
 </html>
