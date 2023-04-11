@@ -1,94 +1,33 @@
 <!DOCTYPE>
 <html>
     <head>
+        <link href="style.css" type="text/css" rel="stylesheet"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Furever Pet</title>
         <style>
-            * {
-                box-sizing: border-box;
+            label, select {
+                display: block;
+                margin: 0.25rem;
+                padding: 0.25rem;
             }
-            
-            body {
-                height: 100vh;
-                width: 100vw;
+            form {
                 display: flex;
                 flex-direction: column;
-                font-family: 'Lato', sans-serif;
-                margin: 0;
-            }
-            
-            header {
                 justify-content: center;
-                background-color: #9F9F9F;
-                padding: 1rem;
             }
-            
-            .title {
-                text-align: center;
-                background-color: #858585;
-            }
-            
-            nav {
-                background-color: #F0F0F0;
-                display: flex;
-                justify-content: space-evenly;
-            }
-            
-            main {
-                padding: 1rem;
-                background-color: #B3DEBD;
-                overflow-y: auto;
-                display: flex;
-            }
-            
-            aside {  
-                width: 30vw;
-                background-color: #C1B3DE;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                padding: 1rem;
-            }
-            
-            .aside-div {
-                background-color: #FFD1A9;
-                height: 150px;
-                margin: 1rem;
-            }
-            
-            section {
-                width: 70vw;
-                background-color: #C1a3fE;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                padding: 1rem;
-            }
-            
-            .article-div {
-                background-color: #E4FFA9;
-                height: 150px;
-                margin: 1rem;
-            }
-            
-            footer {
-                #position: fixed;
-                #bottom: 0;
-                background-color: #99C5C6;
-                justify-content: center;
-                padding: 1rem;
-                width: 100%;
+            #button-container {
+                padding-top: 1rem;
             }
         </style>
     </head>
     <body>
         <header>
-            <h1 class="title">This is the page title</h1>
+            <h1 class="title">FurEver Pet <img src="logo.png" width=25px height=25px/></h1>
             <nav>
-                <a class="nav-anchor" target="_blank">link 1</a>
-                <a class="nav-anchor" target="_blank">link 2</a>
-                <a class="nav-anchor" target="_blank">link 3</a>
-                <a class="nav-anchor" target="_blank">link 4</a>
+                <a class="nav-anchor" target="_blank">About Us</a>
+                <a class="nav-anchor" target="_blank">Cats</a>
+                <a class="nav-anchor" target="_blank">Dogs</a>
+                <a class="nav-anchor" target="_blank">Adoption Form</a>
             </nav>
         </header>
         <main>
@@ -97,83 +36,65 @@
                     <form>
                       <label for="breed">BREED</label>
                       <select name="breed" id="breed">
-                        <option value="a">a</option>
-                        <option value="b">b</option>
-                        <option value="c">c</option>
-                        <option value="d">d</option>
+                        <option value="Mix">Mix</option>
+                        <option value="French Bulldogs">French Bulldogs</option>
+                        <option value="Labrador Retrievers">Labrador Retrievers</option>
+                        <option value="Golden Retrievers">Golden Retrievers</option>
+                        <option value="German Shepherd Dogs">German Shepherd Dogs</option>
                       </select>
-                      <!--<input type="submit" value="Submit">-->
-                    </form>
-                </div>
-                <div class="aside-div">
-                    <form>
-                      <label for="age">AGE</label>
-                      <select name="breed" id="breed">
-                        <option value="a">a</option>
-                        <option value="b">b</option>
-                        <option value="c">c</option>
-                        <option value="d">d</option>
+                      <label for="age">AGE(month)</label>
+                      <select name="age" id="age">
+                        <option value="3">0-3</option>
+                        <option value="6">3-6</option>
+                        <option value="12">6-12</option>
+                        <option value="13">12+</option>
                       </select>
-                      <!--<input type="submit" value="Submit">-->
-                    </form>
-                </div>
-                <div class="aside-div">
-                    <form>
                       <label for="size">SIZE</label>
-                      <select name="breed" id="breed">
-                        <option value="a">a</option>
-                        <option value="b">b</option>
-                        <option value="c">c</option>
-                        <option value="d">d</option>
+                      <select name="size" id="size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
                       </select>
-                      <!--<input type="submit" value="Submit">-->
-                    </form>
-                </div>
-                <div class="aside-div">
-                    <form>
                       <label for="gender">GENDER</label>
-                      <select name="breed" id="breed">
-                        <option value="a">a</option>
-                        <option value="b">b</option>
-                        <option value="c">c</option>
-                        <option value="d">d</option>
+                      <select name="gender" id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
                       </select>
-                      <!--<input type="submit" value="Submit">-->
-                    </form>
-                </div>
-                <div class="aside-div">
-                    <form>
                       <label for="color">COLOR</label>
-                      <select name="breed" id="breed">
-                        <option value="a">a</option>
-                        <option value="b">b</option>
-                        <option value="c">c</option>
-                        <option value="d">d</option>
+                      <select name="color" id="color">
+                        <option value="white">White</option>
+                        <option value="gray">Gray</option>
+                        <option value="black">Black</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="brown">Brown</option>
+                        <option value="mixed">Mixed</option>
                       </select>
-                      <!--<input type="submit" value="Submit">-->
+                      <div id="button-container">
+                        <button type="submit">SEARCH</button>
+                      </div>
                     </form>
-                </div>
-                <div class="aside-div">
-                    <button>SEARCH</button>
                 </div>
             </aside>
             <section>
+                <article class="article-div">
                 <table>
                     <tr>
                         <td><img src="https://placekitten.com/200/300" alt="cat" /></td>
                         <td><img src="https://placekitten.com/200/300" alt="cat" /></td>
                         <td><img src="https://placekitten.com/200/300" alt="cat" /></td>
+                        <td><img src="https://placekitten.com/200/300" alt="cat" /></td>
+                        <td><img src="https://placekitten.com/200/300" alt="cat" /></td>
                     </tr>
                     <tr>
                         <td><img src="https://placekitten.com/200/300" alt="cat" /></td>
                         <td><img src="https://placekitten.com/200/300" alt="cat" /></td>
-                        <td><img src="https://placekitten.com/200/300" alt="cat" /></td>
                     </tr>
                 </table>
+                <article>
             </section>
         </main>
         <footer>
-            <h1 class="title">This is the footer</h1>
+            <h4 class="title">©2023 FurEver.com All trademarks are owned by Fantastic Four.</h4>
         </footer>
     </body>
 </html>
