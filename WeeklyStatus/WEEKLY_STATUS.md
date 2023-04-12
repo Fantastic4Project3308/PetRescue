@@ -151,11 +151,11 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 ### Obstacles
 * Front and backend did not experience obstacles this week
 
-# Week 12
+# Week 8
 #### Frontend
 * Worked on the css themes/styles that applies to webpages.
 <br>
-<img src="Wk12_Frontend.jpg" alt="Wk12Frontend" WIDTH=50% ALIGH="LEFT"/>
+<img src="Wk8_Frontend.jpg" alt="Wk8Frontend" WIDTH=50% ALIGH="LEFT"/>
 <br>
 <br>
 
@@ -168,21 +168,30 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 * Can be found in main tree
 * SQL_DESIGN.md
 <br>
-<img src="Wk12_Backend.jpg" alt="Wk12Backend" WIDTH=50% ALIGH="LEFT"/>
-<img src="sql_design.JPG" alt="Wk12BackEnd" WIDTH=50% ALIGH="LEFT"/>
+<img src="Wk8_Backend.jpg" alt="Wk8Backend" WIDTH=50% ALIGH="LEFT"/>
+
+* Milestone 5 was completed
+<img src="sql_design.JPG" alt="Milestone 5" WIDTH=50% ALIGH="LEFT"/>
 <br>
 <br>
 
 #### Goals for next week
 * 4/7 - everyone will work on their individual webpages. We need to match the style to the template.html and add a link to the style.css file. Let team know when completed so Zack can do a final check. Complete this portion by 4/12. This will be the end of sprint 2.
-* Flask page -> Furever.py-->Brittany
-* copy and paste prefix
-* copy setup.cmd
-* creating routes-->Brittany
-* connecting those routes with functions that render the html pages-->Mayra || data/sql with js linking to pages -->next sprint
-
-If there's time, Zack will work on Javascript to test button functionality.
+* If there's time, Zack will work on Javascript to test button functionality.
+* We'll start sprint 3 as a team during our 4/13 zoom meeting.
 
 ### Obstacles
 * Try to figure out how to link the webpage through the `<a>` tag.
 * Try to fit the image inside the div.
+
+# Week 9 (Start of Sprint 3)
+#### Frontend
+
+
+#### Frontend
+
+
+#### Goals for next week
+
+
+### Obstacles
