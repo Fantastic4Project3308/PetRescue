@@ -155,20 +155,14 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 #### Frontend
 * Worked on the css themes/styles that applies to webpages.
 <br>
-<img src="Wk8_Frontend.jpg" alt="Wk8Frontend" WIDTH=50% ALIGH="LEFT"/>
+<img src="Wk8_FrontEnd.jpg" alt="Wk8FrontEnd" WIDTH=50% ALIGH="LEFT"/>
 <br>
 <br>
 
 #### Backend
 * Completed:
-* Created flask page
-* Copy and paste prefix
-* Copy setup.cmd
-* Created routes with comments
-* Can be found in main tree
-* SQL_DESIGN.md
 <br>
-<img src="Wk8_Backend.jpg" alt="Wk8Backend" WIDTH=50% ALIGH="LEFT"/>
+<img src="Wk8_BackEnd.jpg" alt="Wk8BackEnd" WIDTH=50% ALIGH="LEFT"/>
 
 * Milestone 5 was completed
 <img src="sql_design.JPG" alt="Milestone 5" WIDTH=50% ALIGH="LEFT"/>
@@ -185,13 +179,23 @@ We also discussed what we'd like to accomplish during this new sprint as detaile
 * Try to fit the image inside the div.
 
 # Week 9 (Start of Sprint 3)
+***Going forward, the team will meet twice of week to complete project by 4/28
 #### Frontend
+* Completed rework of individual webpages. Style now matches template. Pages that did not fit the template were styled individually for better readibility
 
-
-#### Frontend
-
+#### Backend
+* Coded as a team and figured out how to render data pulled from SQL onto Webpage. Brittany will finish this up.
 
 #### Goals for next week
-
+<br>
+<img src="Wk9_BackEnd.png" alt="Wk9BackEnd" WIDTH=50% ALIGH="LEFT"/>
+Push to get these items done by Wednesday meeting. We'll decide what to do next on Wednesday.
 
 ### Obstacles
+#### Frontend
+Zack - reasearch why the css is not rendering when we run webpage with Flask. It renders find when we use HTML viewer.
+
+#### Backend
+No obstacles this week.
+
+
