@@ -36,7 +36,7 @@ class PrefixMiddleware(object):
 
     def __init__(self, app): 
         self.app = app
-        self.service_prefix = None
+        self.service_prefix = ''
         
         # If we are in a JupyterHub environment, the OS environment variable will be 
         #    set with the user's info.
@@ -56,7 +56,7 @@ class PrefixMiddleware(object):
         
     def __call__(self, environ, start_response):
 
-        environ['SCRIPT_NAME'] = self.service_prefix + environ['SERVER_PORT']
+        #environ['SCRIPT_NAME'] = self.service_prefix + environ['SERVER_PORT']
         #print(f"Setting SCRIPT_NAME to {environ['SCRIPT_NAME']}")
 
         # call the default processing
