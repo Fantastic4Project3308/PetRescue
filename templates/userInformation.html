@@ -47,31 +47,55 @@
     </table>
     <script>
       // Get saved form data from local storage
-      const storedData = localStorage.getItem('formData');
-      if (storedData) {
-        const parsedData = JSON.parse(storedData);
-        const tableBody = document.getElementById('user-info');
-        for (const data of parsedData) {
+      // const storedData = localStorage.getItem('formData');
+      // if (storedData) {
+      //   const parsedData = JSON.parse(storedData);
+      //   const tableBody = document.getElementById('user-info');
+      //   for (const data of parsedData) {
+      //     const row = document.createElement('tr');
+      //     row.innerHTML = `
+      //       <td>${data.fname}</td>
+      //       <td>${data.occupation || ''}</td>
+      //       <td>${data.address}</td>
+      //       <td>${data.addresslen || ''}</td>
+      //       <td>${data.phone}</td>
+      //       <td>${data.email}</td>
+      //       <td>${data.adultcount || ''}</td>
+      //       <td>${data.kidcount || ''}</td>
+      //       <td>${data.hometype || ''}</td>
+      //       <td>${data.household || ''}</td>
+      //       <td>${data.landlord || ''}</td>
+      //       <td>${data.allergy || ''}</td>
+      //       <td>${data.decision || ''}</td>
+      //       <td>${data.time || ''}</td>
+      //     `;
+      //     tableBody.appendChild(row);
+      //   }
+      // }
+      const tableBody = document.getElementById('user-info');
+      const contacts = JSON.parse('{{ contacts | tojson | safe}}')
+      console.log(contacts);
+      for (const data of contacts) {
           const row = document.createElement('tr');
           row.innerHTML = `
-            <td>${data.fname}</td>
-            <td>${data.occupation || ''}</td>
-            <td>${data.address}</td>
-            <td>${data.addresslen || ''}</td>
-            <td>${data.phone}</td>
-            <td>${data.email}</td>
-            <td>${data.adultcount || ''}</td>
-            <td>${data.kidcount || ''}</td>
-            <td>${data.hometype || ''}</td>
-            <td>${data.household || ''}</td>
-            <td>${data.landlord || ''}</td>
-            <td>${data.allergy || ''}</td>
-            <td>${data.decision || ''}</td>
-            <td>${data.time || ''}</td>
+            <td>${data.ContactId}</td>
+            <td>${data.Name}</td>
+            <td>${data.Occupation || ''}</td>
+            <td>${data.Address}</td>
+            <td>${data.DurationOfResidence || ''}</td>
+            <td>${data.Phone}</td>
+            <td>${data.Email}</td>
+            <td>${data.Adultcount || ''}</td>
+            <td>${data.Kidcount || ''}</td>
+            <td>${data.Hometype || ''}</td>
+            <td>${data.Household || ''}</td>
+            <td>${data.Landlord || ''}</td>
+            <td>${data.Allergy || ''}</td>
+            <td>${data.Agreement || ''}</td>
+            <td>${data.Love || ''}</td>
           `;
           tableBody.appendChild(row);
         }
-      }
     </script>
   </body>
 </html>

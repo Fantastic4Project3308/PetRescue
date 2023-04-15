@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import prefix
-from flask import Flask, url_for, make_response, render_template
+from flask import Flask, url_for, make_response, render_template, request, json
 from markupsafe import escape
 import sqlite3
 
@@ -12,6 +12,12 @@ app = Flask(__name__)
 
 
 prefix.use_PrefixMiddleware(app)   
+
+def query_db(query, args=(), one=False):
+    c.execute(query, args)
+    r = [dict((c.description[i][0], value) \
+               for i, value in enumerate(row)) for row in c.fetchall()]
+    return (r[0] if r else None) if one else r
 
 # test route to show prefix settings
 @app.route('/prefix_url')  
@@ -29,6 +35,47 @@ def aboutus():
 @app.route('/adoptionform')
 def adoptionform():
     return render_template('AdoptionForm.html')
+#insert a new contact
+@app.route('/contact', methods = ['POST'])
+def contact():
+    data = json.dumps(request.form.to_dict(flat=False))
+    data = json.loads(data)
+    c.execute('''
+        INSERT INTO Contact (Name,
+                    Occupation,
+                    Address,
+                    DurationOfResidence,
+                    Phone,
+                    Email,
+                    AdultCount,
+                    KidCount,
+                    HomeType,
+                    HouseholdDescription,
+                    Allergy,
+                    Agreement,
+                    LOVE) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ''', (
+    str(data['fname'][0] or ''),
+    str(data['occupation'][0]  or ''),
+    str(data['address'][0]  or ''),
+    data['addresslen'][0] ,
+    str(data['phone'][0]  or ''),
+    str(data['email'][0]  or ''),
+    data['adultcount'][0] ,
+    data['kidcount'][0] ,
+    str(data['hometype'][0]  or ''),
+    str(data['landlord'][0]  or ''),
+    1 if 'allergy' in data and data['allergy'][0]  == 'allergy-yes' else 0,
+    1 if 'decision' in data and data['decision'][0]  == 'decision-yes' else 0,
+    1 if 'time' in data and data['time'][0]  == 'time-yes' else 0
+    ))
+    conn.commit()
+    return 'Success!'
+#show contacts
+@app.route('/contacts')
+def contacts():
+    contacts = query_db("select * from Contact")
+    return render_template('userInformation.html', contacts = contacts)
 #cat page
 @app.route('/cats')
 def catpage():
