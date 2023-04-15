@@ -1,0 +1,77 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Information</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      th, td {
+        text-align: left;
+        padding: 8px;
+        border: 1px solid #ddd;
+      }
+      
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>User Information</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID (int): unique identifier for each person</th>
+          <th>Name</th>
+          <th>Occupation</th>
+          <th>Address</th>
+          <th>Duration of residence</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Adult Count</th>
+          <th>Kid Count</th>
+          <th>Home Type</th>
+          <th>Household Description</th>
+          <th>Landlord</th>
+          <th>Allergy</th>
+          <th>Decision</th>
+          <th>Love</th>
+        </tr>
+      </thead>
+      <tbody id="user-info">
+      </tbody>
+    </table>
+    <script>
+      // Get saved form data from local storage
+      const storedData = localStorage.getItem('formData');
+      if (storedData) {
+        const parsedData = JSON.parse(storedData);
+        const tableBody = document.getElementById('user-info');
+        for (const data of parsedData) {
+          const row = document.createElement('tr');
+          row.innerHTML = `
+            <td>${data.fname}</td>
+            <td>${data.occupation || ''}</td>
+            <td>${data.address}</td>
+            <td>${data.addresslen || ''}</td>
+            <td>${data.phone}</td>
+            <td>${data.email}</td>
+            <td>${data.adultcount || ''}</td>
+            <td>${data.kidcount || ''}</td>
+            <td>${data.hometype || ''}</td>
+            <td>${data.household || ''}</td>
+            <td>${data.landlord || ''}</td>
+            <td>${data.allergy || ''}</td>
+            <td>${data.decision || ''}</td>
+            <td>${data.time || ''}</td>
+          `;
+          tableBody.appendChild(row);
+        }
+      }
+    </script>
+  </body>
+</html>
