@@ -1,7 +1,7 @@
 <!DOCTYPE>
 <html>
   <head>
-    <link href="style.css" type="text/css" rel="stylesheet" />
+    <link href="{{url_for('static', filename='style.css')}}" type="text/css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Furever Pet</title>
       <style>
@@ -34,13 +34,13 @@
   </head>
   <body>
     <header>
-      <h1 class="title">FurEver Pet <img src="logo.png" width=25px height=25px />
+      <h1 class="title">FurEver Pet <img src="{{url_for('static', filename='logo.png')}}" width=25px height=25px />
       </h1>
       <nav>
-        <a class="nav-anchor" target="_blank">About Us</a>
-        <a class="nav-anchor" target="_blank">Cats</a>
-        <a class="nav-anchor" target="_blank">Dogs</a>
-        <a class="nav-anchor" target="_blank">Adoption Form</a>
+        <a class="nav-anchor" href="/" target="_self">About Us</a>
+        <a class="nav-anchor" href="/cats" target="_self">Cats</a>
+        <a class="nav-anchor" href="/dogs" target="_self">Dogs</a>
+        <a class="nav-anchor" href="/adoptionform" target="_self">Adoption Form</a>
       </nav>
     </header>
     <main>
