@@ -25,7 +25,7 @@
     <table>
       <thead>
         <tr>
-          <th>ID (int): unique identifier for each person</th>
+          <th>ID</th>
           <th>Name</th>
           <th>Occupation</th>
           <th>Address</th>
@@ -46,32 +46,6 @@
       </tbody>
     </table>
     <script>
-      // Get saved form data from local storage
-      // const storedData = localStorage.getItem('formData');
-      // if (storedData) {
-      //   const parsedData = JSON.parse(storedData);
-      //   const tableBody = document.getElementById('user-info');
-      //   for (const data of parsedData) {
-      //     const row = document.createElement('tr');
-      //     row.innerHTML = `
-      //       <td>${data.fname}</td>
-      //       <td>${data.occupation || ''}</td>
-      //       <td>${data.address}</td>
-      //       <td>${data.addresslen || ''}</td>
-      //       <td>${data.phone}</td>
-      //       <td>${data.email}</td>
-      //       <td>${data.adultcount || ''}</td>
-      //       <td>${data.kidcount || ''}</td>
-      //       <td>${data.hometype || ''}</td>
-      //       <td>${data.household || ''}</td>
-      //       <td>${data.landlord || ''}</td>
-      //       <td>${data.allergy || ''}</td>
-      //       <td>${data.decision || ''}</td>
-      //       <td>${data.time || ''}</td>
-      //     `;
-      //     tableBody.appendChild(row);
-      //   }
-      // }
       const tableBody = document.getElementById('user-info');
       const contacts = JSON.parse('{{ contacts | tojson | safe}}')
       console.log(contacts);
