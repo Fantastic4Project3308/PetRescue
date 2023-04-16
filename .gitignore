@@ -1,5 +1,2 @@
-PetData/Cat/.ipynb_checkpoints/cat-checkpoint.txt
-PetData/.ipynb_checkpoints/AnimalName-checkpoint.sh
-venv
-.DS_Store
-
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
