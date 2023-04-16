@@ -35,4 +35,27 @@ Development method: The team will use scrum to develop the website. Sprints will
 
 Project Tracking Software link: https://trello.com/w/fantasticfour82
 
+## How to run Flask and host our PetRescue website on your laptop
 
+### clone our repo 
+
+```
+git clone https://github.com/Fantastic4Project3308/PetRescue.git
+cd PetRescue
+```
+
+### set up python virtual env, and install & configure Flask
+
+```
+python3 -m venv venv
+. venv/bin/activate
+pip install Flask
+source ./setup.cmds
+```
+
+### run flask to host our website locally
+```
+flask --app Furever.py run
+```
+
+Now, you can access our website by going to `http://localhost:3308/` using your browser.
