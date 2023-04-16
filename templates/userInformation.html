@@ -1,3 +1,13 @@
+<!--
+  File: userInformation.html
+  
+  Objective: This is an HTML file that displays user information in a table. 
+  It uses JavaScript to populate the table with data from a JSON object.
+  
+  Date: Apr 2023
+-->
+
+
 <!DOCTYPE>
 <html>
   <head>
@@ -21,8 +31,11 @@
     </style>
   </head>
   <body>
+    <!-- Add a heading to the page -->
     <h1>User Information <img src="{{url_for('static', filename='logo.png')}}" width=25px height=25px/></h1>
-    <table>
+    <!-- Create a table to display user information -->
+    <table>  
+      <!-- Add table header with column names -->
       <thead>
         <tr>
           <th>ID</th>
@@ -37,36 +50,40 @@
           <th>Home Type</th>
           <th>Household Description</th>
           <th>Landlord</th>
-          <th>Allergy</th>
-          <th>Decision</th>
-          <th>Love</th>
+          <th>Animal Allergy</th>
+          <th>Family Agreement</th>
+          <th>Time Commitment</th>
         </tr>
       </thead>
+      <!-- Add table body with user data -->
       <tbody id="user-info">
       </tbody>
     </table>
+    <!-- Use JavaScript to populate the table with data -->
     <script>
       const tableBody = document.getElementById('user-info');
+      // Parse JSON data from Flask backend
       const contacts = JSON.parse('{{ contacts | tojson | safe}}')
       console.log(contacts);
+      // Loop through each user data and create a table row for each user
       for (const data of contacts) {
           const row = document.createElement('tr');
           row.innerHTML = `
             <td>${data.ContactId}</td>
-            <td>${data.Name}</td>
+            <td>${data.Name || ''}</td>
             <td>${data.Occupation || ''}</td>
-            <td>${data.Address}</td>
-            <td>${data.DurationOfResidence || ''}</td>
-            <td>${data.Phone}</td>
-            <td>${data.Email}</td>
-            <td>${data.Adultcount || ''}</td>
-            <td>${data.Kidcount || ''}</td>
-            <td>${data.Hometype || ''}</td>
-            <td>${data.Household || ''}</td>
+            <td>${data.Address || ''}</td>
+            <td>${data.DurationOfResidence}</td>
+            <td>${data.Phone || ''}</td>
+            <td>${data.Email || ''}</td>
+            <td>${data.AdultCount}</td>
+            <td>${data.KidCount}</td>
+            <td>${data.HomeType}</td>
+            <td>${data.HouseholdDescription}</td>
             <td>${data.Landlord || ''}</td>
-            <td>${data.Allergy || ''}</td>
-            <td>${data.Agreement || ''}</td>
-            <td>${data.Love || ''}</td>
+            <td>${data.Allergy}</td>
+            <td>${data.Agreement}</td>
+            <td>${data.TimeCommitment}</td>
           `;
           tableBody.appendChild(row);
         }

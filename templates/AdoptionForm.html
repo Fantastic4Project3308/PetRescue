@@ -1,3 +1,12 @@
+<!--
+  File: AdaptionForm.html
+  
+  Objective: This is an HTML file that displays a form for adopting pets. 
+  The form includes fields for contact information, family and housing information, and pet preferences.
+  
+  Date: Apr 2023
+-->
+
 <!DOCTYPE>
 <html>
   <head>
@@ -44,7 +53,6 @@
       </nav>
     </header>
     <main>
-<!-- added -->
       <form action="/contact" method="post">
         <fieldset>
             <legend>Contact Information</legend>
@@ -70,8 +78,15 @@
             <label for="kidcount">How many kids are there in your home?</label>
             <input type="number" id="kidcount" name="kidcount" min=0 max=99>
             <label for="hometype">What type of home do you live in?</label>
-            <input type="text" id="hometype" name="hometype">
-            
+            <input type="radio" id="duplex" name="hometype" value="duplex" style="display: inline">
+            <label for="duplex" style="display: inline">Duplex</label>
+            <input type="radio" id="condo" name="hometype" value="condo" style="display: inline">
+            <label for="condo" style="display: inline">Condo</label>
+            <input type="radio" id="townhouse" name="hometype" value="townhouse" style="display: inline">
+            <label for="townhouse" style="display: inline">Townhouse</label>
+            <input type="radio" id="mobilehome" name="hometype" value="mobilehome" style="display: inline">
+            <label for="mobilehome" style="display: inline">Mobile Home</label>
+
             <legend id="household">Please describe your household</legend>
             <input type="radio" id="active" name="household" value="active" style="display: inline">
             <label for="active" style="display: inline">Active</label>
