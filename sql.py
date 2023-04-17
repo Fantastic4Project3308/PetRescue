@@ -20,7 +20,7 @@ c.execute("Create table adoption(name varchar(45), occupation varchar(45), addre
 
 #creating dictionaries of all the cat information 
 cat_51289679_dict = {
-    'id':51289679,
+    'id':51289678,
     'name': 'Mocha',
     'description': "Mocha is an intelligent cat who, after getting over her initial shyness, is friendly and social. Although she doesn't care for full body pets or being picked up, she loves head and ear scritches and will hang out next to you on the couch. She also enjoys playing, looking out the window, and finding high perches where she can survey the room and take a nap. She's a graceful girl who doesn't break things, and she's a pro with her scratching pad. Mocha is looking for a home with no other cats and mature guardians who can read cat body language and respect her boundaries. In return you will be getting a sweet, lovely companion.",
     'breed': 'Domestic Shorthair/Mix',
