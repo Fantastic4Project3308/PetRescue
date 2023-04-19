@@ -13,9 +13,6 @@ c.execute("Create table Cat(id int, name varchar(45), description varchar(1000),
 c.execute("DROP TABLE IF EXISTS Dog")
 c.execute("Create table Dog(id int, name varchar(45), description varchar(1000), breed varchar(20), age varchar(50), gender varchar(10),color varchar(10),size varchar(10), location varchar(10), primary key (id));")
 
-#creating adoption form table
-c.execute("DROP TABLE IF EXISTS adoption")
-c.execute("Create table adoption(name varchar(45), occupation varchar(45), address varchar(100), duration varchar(50), phone varchar(15),email varchar(50));")
 
 
 #creating dictionaries of all the cat information 

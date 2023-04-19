@@ -198,4 +198,33 @@ Zack - reasearch why the css is not rendering when we run webpage with Flask. It
 #### Backend
 No obstacles this week.
 
+# Week 10 (Start of Sprint 3)
+## Meeting 1 Wednesday 4/19
+#### Frontend
+<br>
+<img src="Wk10_FrontEnd.png" alt="Wk10FrontEnd" WIDTH=50% ALIGH="LEFT"/>
+* Updated to create userinformation.html with user's inputs using GET and POST method
+* Edited adoption form questionnaire to align with database terms
+* Made sure buttons that link to other pages are functioning
+
+#### Backend
+* Rendered data pulled from SQL onto Webpage
+* Testing functions created and completed for database table content and data types 
+* Created route '/contact' to to capture data from adoption form once form 
+<br>
+<img src="Wk10_BackEnd.png" alt="Wk10BackEnd" WIDTH=50% ALIGH="LEFT"/>
+#### Goals for next week
+* Add animal ID to pull down list 
+* Add mailto on adaptionform the page
+* Complete all drop down selections for cat and dog search pages so that it can load animal based on preferences
+* Complete query testing 
+
+### Obstacles
+#### Frontend
+* Zack- make sure selections render correct cat and dogs
+
+#### Backend
+* Mayumi- making adoption form table information render dynamic
+* Mayra- how to approach further query testing 
+
 
