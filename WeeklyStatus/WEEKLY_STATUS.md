@@ -218,6 +218,7 @@ No obstacles this week.
 * Add mailto on adaptionform the page
 * Complete all drop down selections for cat and dog search pages so that it can load animal based on preferences
 * Complete query testing 
+* Deploy Flask app
 
 ### Obstacles
 #### Frontend
