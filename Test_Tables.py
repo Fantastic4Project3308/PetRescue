@@ -21,12 +21,12 @@ def get_column_datatypes(db_name, table_name):
     return column_datatypes
 
 
-# Function tests data types in Dog, Cat, and Adoption tables
+# Function tests data types in Dog, Cat, and Contact tables
 # if condition returns true, print message; otherwise, AssertionError is raised
 def test_column_datatypes(db_name):
     dogDataTypes = get_column_datatypes('Furever.db', 'Dog')
     catDataTypes = get_column_datatypes('Furever.db', 'Cat')
-    adoptionDataTypes = get_column_datatypes('Furever.db', 'adoption')
+    contactDataTypes = get_column_datatypes('Furever.db', 'Contact')
     
     # test dog table
     assert dogDataTypes == ['INT', 'varchar(45)', 'varchar(1000)', 'varchar(20)', 'varchar(50)', 
@@ -38,10 +38,9 @@ def test_column_datatypes(db_name):
                             'varchar(10)', 'varchar(10)', 'varchar(10)', 'varchar(10)'], f"expected data match"
     print("Test passed - Data types for columns in Cat table match as expected")
     
-    # test adoption table
-    assert adoptionDataTypes == ['varchar(45)', 'varchar(45)', 'varchar(100)', 'varchar(50)', 
-                                 'varchar(15)', 'varchar(50)'], f"expected data match"
-    print("Test passed - Data types for columns in Adoption table match as expected")
+    # test contact table
+    assert contactDataTypes == ['Integer', 'varchar(45)', 'varchar(15)', 'integer'], f"expected data match"
+    print("Test passed - Data types for columns in Contact table match as expected")
 
 # call function
 test_column_datatypes('Furever.db')
