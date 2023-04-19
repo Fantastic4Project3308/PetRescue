@@ -26,9 +26,9 @@ def prefix_url():
 #homepage
 @app.route('/')
 def homepage():
-    cat_url = url_for('catpage')
-    dog_url = url_for('dogpage')
-    return render_template('Homepage.html', cat_url=cat_url, dog_url=dog_url)
+    #cat_url = url_for('catpage')
+    #dog_url = url_for('dogpage')
+    return render_template('Homepage.html')
 #about us
 @app.route('/aboutus')
 def aboutus():
