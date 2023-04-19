@@ -42,6 +42,8 @@ def adoptionform():
 def contact():
     data = json.dumps(request.form.to_dict(flat=False))
     data = json.loads(data)
+    # for entry in data(some range or len(range)):
+        # c.executemany(change fname to entry) what does the 0 mean?
     c.execute('''
         INSERT INTO Contact (Name,
                     Occupation,
@@ -58,7 +60,7 @@ def contact():
                     Agreement,
                     TimeCommitment) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ''', (
-    str(data['fname'][0] or ''),
+    str(data['fname'][0] or ''), # replace 0 with entry; this should go thrpough every entry in json dict
     str(data['occupation'][0]  or ''),
     str(data['address'][0]  or ''),
     data['addresslen'][0],
