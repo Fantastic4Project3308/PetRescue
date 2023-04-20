@@ -6,7 +6,7 @@ import sqlite3
 import psycopg2
 
 
-app = Flask(__name__)
+
 
 conn = sqlite3.connect('Furever.db', check_same_thread=False)
 c= conn.cursor()
