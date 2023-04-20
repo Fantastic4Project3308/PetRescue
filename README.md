@@ -50,6 +50,7 @@ cd PetRescue
 python3 -m venv venv
 . venv/bin/activate
 pip install Flask
+pip install psycopg2-binary
 source ./setup.cmds
 ```
 
