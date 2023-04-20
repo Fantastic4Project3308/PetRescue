@@ -41,19 +41,26 @@ def aboutus():
 @app.route('/adoptionform')
 def adoptionform():
     return render_template('AdoptionForm.html')
+
 #insert a new contact
+# This code defines a route for adding a new contact to the "Contact" table in the database.
+# When a POST request is made to the "/contact" route, the contact() function is executed.
 @app.route('/contact', methods = ['POST'])
 def contact():
+    # Convert the request form data to a dictionary and then to a JSON string
     data = json.dumps(request.form.to_dict(flat=False))
+    # Parse the JSON string back into a dictionary
     data = json.loads(data)
-    # for entry in data(some range or len(range)):
-        # c.executemany(change fname to entry) what does the 0 mean?
+    # Execute the SQL query to insert a new record into the "Contact" table.
+    # The query uses placeholders `?` for values to prevent SQL injection.
+    # These placeholders will be replaced with the actual values in the following tuple.
     c.execute('''
         INSERT INTO Contact (Name,
+                    PhoneNumber,
+                    TitleAnimalId,
                     Occupation,
                     Address,
                     DurationOfResidence,
-                    Phone,
                     Email,
                     AdultCount,
                     KidCount,
@@ -62,13 +69,19 @@ def contact():
                     Landlord,
                     Allergy,
                     Agreement,
-                    TimeCommitment) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                    TimeCommitment) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ''', (
-    str(data['fname'][0] or ''), # replace 0 with entry; this should go thrpough every entry in json dict
+    # The following lines use the dictionary 'data' to access specific form values.
+    # The [0] is used because the form values are stored as lists in the dictionary,
+    # with the actual value being the first element of the list.
+    # For example, 'data['fname'][0]' retrieves the first (and only) element of
+    # the 'fname' list, which is the name entered by the user in the form.
+    str(data['fname'][0] or ''),
+    str(data['phone'][0]  or ''),
+    data['animalId'][0],
     str(data['occupation'][0]  or ''),
     str(data['address'][0]  or ''),
     data['addresslen'][0],
-    str(data['phone'][0]  or ''),
     str(data['email'][0]  or ''),
     data['adultcount'][0],
     data['kidcount'][0],
@@ -79,8 +92,10 @@ def contact():
     1 if 'decision' in data and data['decision'][0]  == 'decision-yes' else 0,
     1 if 'time' in data and data['time'][0]  == 'time-yes' else 0
     ))
+    # Commit the transaction to the database
     conn.commit()
-    return 'Success!'
+    return 'Success! For any questions, contact us by sending an email to david.knox@colorado.edu'
+
 #show contacts
 @app.route('/contacts')
 def contacts():

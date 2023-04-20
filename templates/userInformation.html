@@ -40,19 +40,8 @@
         <tr>
           <th>ID</th>
           <th>Name</th>
-          <th>Occupation</th>
-          <th>Address</th>
-          <th>Duration of residence</th>
-          <th>Phone</th>
-          <th>Email</th>
-          <th>Adult Count</th>
-          <th>Kid Count</th>
-          <th>Home Type</th>
-          <th>Household Description</th>
-          <th>Landlord</th>
-          <th>Animal Allergy</th>
-          <th>Family Agreement</th>
-          <th>Time Commitment</th>
+          <th>Phone Number</th>
+          <th>Title(Animal ID)</th>
         </tr>
       </thead>
       <!-- Add table body with user data -->
@@ -66,24 +55,14 @@
       const contacts = JSON.parse('{{ contacts | tojson | safe}}')
       console.log(contacts);
       // Loop through each user data and create a table row for each user
+      // Fields of tables defined on SQL_TESTING.md
       for (const data of contacts) {
           const row = document.createElement('tr');
           row.innerHTML = `
             <td>${data.ContactId}</td>
             <td>${data.Name || ''}</td>
-            <td>${data.Occupation || ''}</td>
-            <td>${data.Address || ''}</td>
-            <td>${data.DurationOfResidence}</td>
-            <td>${data.Phone || ''}</td>
-            <td>${data.Email || ''}</td>
-            <td>${data.AdultCount}</td>
-            <td>${data.KidCount}</td>
-            <td>${data.HomeType}</td>
-            <td>${data.HouseholdDescription}</td>
-            <td>${data.Landlord || ''}</td>
-            <td>${data.Allergy}</td>
-            <td>${data.Agreement}</td>
-            <td>${data.TimeCommitment}</td>
+            <td>${data.PhoneNumber || ''}</td>
+            <td>${data.TitleAnimalId || 'Not Found'}</td>
           `;
           tableBody.appendChild(row);
         }
