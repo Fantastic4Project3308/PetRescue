@@ -386,3 +386,5 @@ def cat_5216():
     return render_template('cat_52167059.html', name=name, description=description, breed=breed, age=age, gender=gender, color=color,size=size, location=location)
 ###############################################################################
 # main driver function
+if __name__ == "__main__":
+    app.run(host='0.0.0.0')
