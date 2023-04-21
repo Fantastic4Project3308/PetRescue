@@ -58,7 +58,7 @@ This repository contains the following files and directories:
 5. [FINAL REPORT](/FINAL_REPORT.md)
 6. Project presentation files from Milestone 5 (<b>link to be added</b>)
 7. Video of demo (<b>link to be added</b>)
-8. Source code
+8. Source code and testing
     - Below shows related repository structure and description.
     ```
     .
@@ -94,7 +94,7 @@ This repository contains the following files and directories:
     | Furever.db || xxx |
     | sql.py || xxx |
     | Furever.py || project code for Flask app with calls to **prefix.py** |
-    | xxx || directory with images for the README and MY_README files |
+    | xxx || xxx |
     | samples || directory with files used for page generation |
     | static || directory with files needed for page display |
     | &nbsp;&nbsp;&nbsp;css || directory with files for xxx |
@@ -111,12 +111,10 @@ This repository contains the following files and directories:
     | WeeklyStatus || include weekly activity report & minuites |
     | README.md | | general information about this project|
     <br>
-
-9. Test cases
-10. Documentation
+9. Documentation
     - This 'README.md' is the main documentation describing overview of this project.
     - 'Furever.py' is the main source code for the project. It uses Python as a programming language.
-11. Link to Public Deployment (https://fureverpet.onrender.com/)
+10. Link to Public Deployment (https://fureverpet.onrender.com/)
 
 ## Getting Started
 
