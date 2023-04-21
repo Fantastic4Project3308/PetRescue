@@ -228,4 +228,33 @@ No obstacles this week.
 * Mayumi- making adoption form table information render dynamic
 * Mayra- how to approach further query testing 
 
+# Week 10
+## Meeting 2 Friday 4/21
+#### Frontend
+<br>
+<img src="Wk10_mtg2_FrontEnd.png" alt="Wk10FrontEnd" WIDTH=50% ALIGH="LEFT"/>
+* Continue working all drop down selections for cat and dog search pages so that it can load animal based on preferences
+* Discussed on criteria of screening (breed/ age (float)/ color)
+
+#### Backend
+<br>
+<img src="Wk10_mtg2_BackEnd.png" alt="Wk10BackEnd" WIDTH=50% ALIGH="LEFT"/>
+* Rendered data pulled from SQL onto Webpage
+* Discussed how we test the search function
+
+#### Deployment/ Documentation
+* Deploied Flask app
+* Updated README.md for usage
+
+#### Goals for next week
+* Complete all drop down selections for cat and dog search pages so that it can load animal based on preferences
+* Add more Cat and Dog pages
+* update query testing once more cat and dog pages are added
+* For Query 1 Test 2 (testing the search engine), test from backend.
+* Revise README.md, linking other documents like PAGE_TESTING.md (WebsiteDesign/MOCK_UP.md) for final submission
+
+### Obstacles
+#### Backend
+* Britteny - figure our how to make Furever.py up and running on Render.com (made wsgi.py and requirements.txt)
+
 
