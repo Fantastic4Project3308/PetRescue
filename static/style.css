@@ -96,8 +96,22 @@ section {
      border-radius:5px;
      border:1px solid gray;
 }
+.article-div ul {
+     padding: 0;
+     margin: 0;
+     list-style: none;
+     display: flex;
+     flex-wrap: wrap;
+}
+.article-div li {
+     margin: 0.5rem;
+}
 .article-div img {
     border-radius: 0.2rem;
+    width: 200px;
+}
+.article-div p {
+    margin: 0;
 }
 footer {
      #position: fixed;
