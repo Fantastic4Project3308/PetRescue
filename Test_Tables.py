@@ -39,7 +39,7 @@ def test_column_datatypes(db_name):
     print("Test passed - Data types for columns in Cat table match as expected")
     
     # test contact table
-    assert contactDataTypes == ['Integer', 'varchar(45)', 'varchar(15)', 'integer'], f"expected data match"
+    assert contactDataTypes == ['INTEGER', 'VARCHAR(20)', 'VARCHAR(12)', 'INTEGER', 'VARCHAR(45)', 'VARCHAR(100)', 'INTEGER', 'VARCHAR(45)', 'INTEGER', 'INTEGER', 'VARCHAR(45)', 'VARCHAR(45)', 'VARCHAR(100)', 'INTEGER', 'INTEGER', 'INTEGER'], f"expected data match"
     print("Test passed - Data types for columns in Contact table match as expected")
 
 # call function
