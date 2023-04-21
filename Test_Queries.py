@@ -6,232 +6,648 @@
 
 import sqlite3
 
-# Function to test all names in dog table
-# if condition returns true, print message; otherwise, AssertionError is raised
-def test_dog_name(db_name):
+###############################################################################################
+#                                  Dog Query Testing                                          #
+###############################################################################################
+
+# Function tests data used to render dog_36636186.html against data in Furever.db
+def test_dog_366(db_name):
+    # Connect to the database.
     conn = sqlite3.connect(db_name)
     c = conn.cursor()
-    
-    # pull all names from table
+
+    # Query the Dog table for data associated with id=36636186
+    c.execute('''SELECT name, description, breed, age, gender, color, size, location
+                 FROM Dog WHERE id=36636186''')
+    expected_data = c.fetchone()
+
+    # Retrieve the expected values for each data field
+    expected_name = expected_data[0]
+    expected_description = expected_data[1]
+    expected_breed = expected_data[2]
+    expected_age = expected_data[3]
+    expected_gender = expected_data[4]
+    expected_color = expected_data[5]
+    expected_size = expected_data[6]
+    expected_location = expected_data[7]
+
+    # dog_366() code - retrieve values from table using exact code from function
     c.execute("select name from Dog")
     myresult = c.fetchall()
-    name_36636186 =  myresult[0][0]
-    name_42904054 =  myresult[1][0]
-    name_43078721 =  myresult[2][0]
-    name_45447002 =  myresult[3][0]
-    name_48818187 =  myresult[4][0]
-    
-    # test names
-    assert name_36636186 == 'Mojo'  
-    assert name_42904054 == 'Jane' 
-    assert name_43078721 == 'Ra'
-    assert name_45447002 == 'Puck'
-    assert name_48818187 == 'Pickles'
-    
-    print("Test passed - Names in Dog table matched as expected.")
-    
-
-# call function
-test_dog_name('Furever.db')
-
-
-# Function to test all descriptions in dog table
-# if condition returns true, print message; otherwise, AssertionError is raised
-def test_dog_description(db_name):
-    conn = sqlite3.connect(db_name)
-    c = conn.cursor()
-    
-    # pull all descriptions from table
+    name =  myresult[0][0]
     c.execute("select description from Dog")
-    myresult = c.fetchall()
-    desc_36636186 =  myresult[0][0]
-    desc_42904054 =  myresult[1][0]
-    desc_43078721 =  myresult[2][0]
-    desc_45447002 =  myresult[3][0]
-    desc_48818187 =  myresult[4][0]
-    
-    # test descriptions
-    assert desc_36636186 == "He is a perfect dog in many ways. He can be left alone with the roam of the house and just sleeps. He only chews on his toys. He's potty trained. He's a hilarious home companion.  He has no resource guarding and is great with body handling, he just loves any attention!  He's smart and can be desensitized to triggers like vacuums and blenders with steady positive association.  He may not have had socialization as a puppy to normal household things like this."  
-    assert desc_42904054 == "I'm a Golden Girl in dog form: sassy, sprightly, and a card-carrying member of the AARP. An athletic and active gal, my hobbies include food puzzles, enjoying belly rubs, and tap dancing! I need a kind adopter to make me feel safe and loved for the rest of my years: someone to appreciate my marvelous, unique qualities. I'm a resilient, physically strong, sweetie-pie: well-mannered indoors, and don't require long walks, but would be happiest with a quiet yard of my own. No humans under 12 years, or kitties or doggos please." 
-    assert desc_43078721 == "Ra is a spirited and smart boy with loads of personality. He's looking for the perfect forever home with the right balance of love, training and structure to help him continue to blossom."
-    assert desc_45447002 == "Hi, I'm Puck, and like most everyone, I have some quirks but that just makes me more interesting. My foster mom says I have lots of nuance... If you don't know what a Belgian Malinois is, you should read up about us - we are known for loyalty, herding and protection. Me personally, well I'm almost five years old, and have often been told that I'm a handsome boy with my shiny brindle coat and expressive ears. I'm also a fast sprinter with quick reflexes and I love to hunt for small critters outside and chase soccer balls!"
-    assert desc_48818187 == "Pickles didn't have the best start to his life...he came to us from a situation where he was not consistently treated with love and kindness. It takes a little bit of time for him to warm up and trust, but once you're in he is totally in love with you! He spent some time in a foster home, and his foster parent told us Pickles was so sweet and loving. He was an incredibly polite houseguest! His favorite nap spots were on the couch or on the floor next to it with his people nearby for some petting and affection. In the morning he likes to run his zoomies out and is always up for a game of ball in the yard. He's super athletic and very fast! He walks fairly well on leash, but will pull sometimes. The good news is that he's treat motivated and is a quick study, so he's ready to learn to have better leash manners."
-    
-    print("Test passed - Descriptions in Dog table matched as expected.")
-    
-
-# call function
-test_dog_description('Furever.db')
-
-
-# Function to test all breeds in dog table
-# if condition returns true, print message; otherwise, AssertionError is raised
-def test_dog_breed(db_name):
-    conn = sqlite3.connect(db_name)
-    c = conn.cursor()
-    
-    # pull all breeds from table
+    myresult2 = c.fetchall()
+    description =  myresult2[0][0]
     c.execute("select breed from Dog")
-    myresult = c.fetchall()
-    breed_36636186 =  myresult[0][0]
-    breed_42904054 =  myresult[1][0]
-    breed_43078721 =  myresult[2][0]
-    breed_45447002 =  myresult[3][0]
-    breed_48818187 =  myresult[4][0]
-    
-    # test breeds
-    assert breed_36636186 == 'Terrier, American Pit Bull/Mix'  
-    assert breed_42904054 == 'Terrier,Pit Bull/Mix' 
-    assert breed_43078721 == 'Terrier,American Pit Bull/Mix'
-    assert breed_45447002 == 'Terrier, American Pit Bull/Mix'
-    assert breed_48818187 == 'Terrier, Pit Bull/Mix'
-    
-    print("Test passed - Breeds in Dog table matched as expected.")
-    
-
-# call function
-test_dog_breed('Furever.db')
-
-
-# Function to test all ages in dog table
-# if condition returns true, print message; otherwise, AssertionError is raised
-def test_dog_age(db_name):
-    conn = sqlite3.connect(db_name)
-    c = conn.cursor()
-    
-    # pull all ages from table
+    myresult3 = c.fetchall()
+    breed = myresult3[0][0]
     c.execute("select age from Dog")
-    myresult = c.fetchall()
-    age_36636186 =  myresult[0][0]
-    age_42904054 =  myresult[1][0]
-    age_43078721 =  myresult[2][0]
-    age_45447002 =  myresult[3][0]
-    age_48818187 =  myresult[4][0]
-    
-    # test ages
-    assert age_36636186 == '6 years 7 months 7 days'  
-    assert age_42904054 == '10 years 8 months 22 days' 
-    assert age_43078721 == '4 years 4 months 4 days'
-    assert age_45447002 == '5 years 5 months 8 days'
-    assert age_48818187 == '3 years 3 months 17 days'
-    
-    print("Test passed - Ages in Dog table matched as expected.")
-    
-
-# call function
-test_dog_age('Furever.db')
-
-
-# Function to test all genders in dog table
-# if condition returns true, print message; otherwise, AssertionError is raised
-def test_dog_gender(db_name):
-    conn = sqlite3.connect(db_name)
-    c = conn.cursor()
-    
-    # pull all genders from table
+    myresult4 = c.fetchall()
+    age = myresult4[0][0]
     c.execute("select gender from Dog")
-    myresult = c.fetchall()
-    gender_36636186 =  myresult[0][0]
-    gender_42904054 =  myresult[1][0]
-    gender_43078721 =  myresult[2][0]
-    gender_45447002 =  myresult[3][0]
-    gender_48818187 =  myresult[4][0]
-    
-    # test genders
-    assert gender_36636186 == 'Male'  
-    assert gender_42904054 == 'Female' 
-    assert gender_43078721 == 'Male'
-    assert gender_45447002 == 'Male'
-    assert gender_48818187 == 'Male'
-    
-    print("Test passed -  Genders in Dog table matched as expected.")
-    
-
-# call function
-test_dog_gender('Furever.db')
-
-
-# Function to test all colors in dog table
-# if condition returns true, print message; otherwise, AssertionError is raised
-def test_dog_color(db_name):
-    conn = sqlite3.connect(db_name)
-    c = conn.cursor()
-    
-    # pull all colors from table
+    myresult5 = c.fetchall()
+    gender = myresult5[0][0]
     c.execute("select color from Dog")
-    myresult = c.fetchall()
-    color_36636186 =  myresult[0][0]
-    color_42904054 =  myresult[1][0]
-    color_43078721 =  myresult[2][0]
-    color_45447002 =  myresult[3][0]
-    color_48818187 =  myresult[4][0]
-    
-    # test colors
-    assert color_36636186 == 'Brindle/White'  
-    assert color_42904054 == 'Brindle'
-    assert color_43078721 == 'Brown/white'
-    assert color_45447002 == 'Brindle/white'
-    assert color_48818187 == 'Brindle/white'
-    
-    print("Test passed -  Colors in Dog table matched as expected.")
-    
-
-# call function
-test_dog_color('Furever.db')
-
-
-# Function to test all sizes in dog table
-# if condition returns true, print message; otherwise, AssertionError is raised
-def test_dog_size(db_name):
-    conn = sqlite3.connect(db_name)
-    c = conn.cursor()
-    
-    # pull all sizes from table
+    myresult6 = c.fetchall()
+    color = myresult6[0][0]
     c.execute("select size from Dog")
-    myresult = c.fetchall()
-    size_36636186 =  myresult[0][0]
-    size_42904054 =  myresult[1][0]
-    size_43078721 =  myresult[2][0]
-    size_45447002 =  myresult[3][0]
-    size_48818187 =  myresult[4][0]
-    
-    # test sizes
-    assert size_36636186 == 'Medium' 
-    assert size_42904054 == 'Large'
-    assert size_43078721 == 'Medium'
-    assert size_45447002 == 'Large'
-    assert size_48818187 == 'Large'
-    
-    print("Test passed - Sizes in Dog table matched as expected.")
-    
+    myresult7 = c.fetchall()
+    size = myresult7[0][0]
+    c.execute("select location from Dog")
+    myresult8 = c.fetchall()
+    location = myresult8[0][0]
+
+    # Compare expected and actual values for each data field.
+    # if condition returns true, print message; otherwise, AssertionError is raised
+    assert name == expected_name
+    assert description == expected_description
+    assert breed == expected_breed
+    assert age == expected_age
+    assert gender == expected_gender
+    assert color == expected_color
+    assert size == expected_size
+    assert location == expected_location
+
+    print("Test passed - Data used to render @app.route('/dog_36636186') matched as expected.")
 
 # call function
-test_dog_size('Furever.db')
+test_dog_366('Furever.db')
 
-# Function to test all locations in dog table
-# if condition returns true, print message; otherwise, AssertionError is raised
-def test_dog_location(db_name):
+
+# Function tests data used to render dog_42904054.html against data in Furever.db
+def test_dog_429(db_name):
+    # Connect to the database.
     conn = sqlite3.connect(db_name)
     c = conn.cursor()
-    
-    # pull all locations from table
-    c.execute("select location from Dog")
-    myresult = c.fetchall()
-    location_36636186 =  myresult[0][0]
-    location_42904054 =  myresult[1][0]
-    location_43078721 =  myresult[2][0]
-    location_45447002 =  myresult[3][0]
-    location_48818187 =  myresult[4][0]
-    
-    # test locations
-    assert location_36636186 == 'Foster Care' 
-    assert location_42904054 == 'Foster Care'
-    assert location_43078721 == 'Foster Care'
-    assert location_45447002 == 'Foster Care'
-    assert location_48818187 == 'Dog Kennels'
-    
-    print("Test passed - Locations in Dog table matched as expected.")
-    
 
-# call function
-test_dog_location('Furever.db')
+    # Query the Dog table for data associated with id=42904054
+    c.execute('''SELECT name, description, breed, age, gender, color, size, location
+                 FROM Dog WHERE id=42904054''')
+    expected_data = c.fetchone()
+
+    # Retrieve the expected values for each data field
+    expected_name = expected_data[0]
+    expected_description = expected_data[1]
+    expected_breed = expected_data[2]
+    expected_age = expected_data[3]
+    expected_gender = expected_data[4]
+    expected_color = expected_data[5]
+    expected_size = expected_data[6]
+    expected_location = expected_data[7]
+
+    # dog_429() code - retrieve values from table using exact code from function
+    c.execute("select name from Dog")
+    myresult = c.fetchall()
+    name =  myresult[1][0]
+    c.execute("select description from Dog")
+    myresult2 = c.fetchall()
+    description =  myresult2[1][0]
+    c.execute("select breed from Dog")
+    myresult3 = c.fetchall()
+    breed = myresult3[1][0]
+    c.execute("select age from Dog")
+    myresult4 = c.fetchall()
+    age = myresult4[1][0]
+    c.execute("select gender from Dog")
+    myresult5 = c.fetchall()
+    gender = myresult5[1][0]
+    c.execute("select color from Dog")
+    myresult6 = c.fetchall()
+    color = myresult6[1][0]
+    c.execute("select size from Dog")
+    myresult7 = c.fetchall()
+    size = myresult7[1][0]
+    c.execute("select location from Dog")
+    myresult8 = c.fetchall()
+    location = myresult8[1][0]
+
+    # Compare expected and actual values for each data field.
+    # if condition returns true, print message; otherwise, AssertionError is raised
+    assert name == expected_name
+    assert description == expected_description
+    assert breed == expected_breed
+    assert age == expected_age
+    assert gender == expected_gender
+    assert color == expected_color
+    assert size == expected_size
+    assert location == expected_location
+
+    print("Test passed - Data used to render @app.route('/dog_42904054') matched as expected.")
+
+# call function    
+test_dog_429('Furever.db')
+
+
+# Function tests data used to render dog_43078721.html against data in Furever.db
+def test_dog_430(db_name):
+    # Connect to the database.
+    conn = sqlite3.connect(db_name)
+    c = conn.cursor()
+
+    # Query the Dog table for data associated with id=43078721
+    c.execute('''SELECT name, description, breed, age, gender, color, size, location
+                 FROM Dog WHERE id=43078721''')
+    expected_data = c.fetchone()
+
+    # Retrieve the expected values for each data field
+    expected_name = expected_data[0]
+    expected_description = expected_data[1]
+    expected_breed = expected_data[2]
+    expected_age = expected_data[3]
+    expected_gender = expected_data[4]
+    expected_color = expected_data[5]
+    expected_size = expected_data[6]
+    expected_location = expected_data[7]
+
+    # dog_430() code - retrieve values from table using exact code from function
+    c.execute("select name from Dog")
+    myresult = c.fetchall()
+    name =  myresult[2][0]
+    c.execute("select description from Dog")
+    myresult2 = c.fetchall()
+    description =  myresult2[2][0]
+    c.execute("select breed from Dog")
+    myresult3 = c.fetchall()
+    breed = myresult3[2][0]
+    c.execute("select age from Dog")
+    myresult4 = c.fetchall()
+    age = myresult4[2][0]
+    c.execute("select gender from Dog")
+    myresult5 = c.fetchall()
+    gender = myresult5[2][0]
+    c.execute("select color from Dog")
+    myresult6 = c.fetchall()
+    color = myresult6[2][0]
+    c.execute("select size from Dog")
+    myresult7 = c.fetchall()
+    size = myresult7[2][0]
+    c.execute("select location from Dog")
+    myresult8 = c.fetchall()
+    location = myresult8[2][0]
+
+    # Compare expected and actual values for each data field.
+    # if condition returns true, print message; otherwise, AssertionError is raised
+    assert name == expected_name
+    assert description == expected_description
+    assert breed == expected_breed
+    assert age == expected_age
+    assert gender == expected_gender
+    assert color == expected_color
+    assert size == expected_size
+    assert location == expected_location
+
+    print("Test passed - Data used to render @app.route('/dog_43078721') matched as expected.")
+
+# call function    
+test_dog_430('Furever.db')
+
+
+# Function tests data used to render dog_45447002.html against data in Furever.db
+def test_dog_454(db_name):
+    # Connect to the database.
+    conn = sqlite3.connect(db_name)
+    c = conn.cursor()
+
+    # Query the Dog table for data associated with id=45447002
+    c.execute('''SELECT name, description, breed, age, gender, color, size, location
+                 FROM Dog WHERE id=45447002''')
+    expected_data = c.fetchone()
+
+    # Retrieve the expected values for each data field
+    expected_name = expected_data[0]
+    expected_description = expected_data[1]
+    expected_breed = expected_data[2]
+    expected_age = expected_data[3]
+    expected_gender = expected_data[4]
+    expected_color = expected_data[5]
+    expected_size = expected_data[6]
+    expected_location = expected_data[7]
+
+    # dog_454() code - retrieve values from table using exact code from function
+    c.execute("select name from Dog")
+    myresult = c.fetchall()
+    name =  myresult[3][0]
+    c.execute("select description from Dog")
+    myresult2 = c.fetchall()
+    description =  myresult2[3][0]
+    c.execute("select breed from Dog")
+    myresult3 = c.fetchall()
+    breed = myresult3[3][0]
+    c.execute("select age from Dog")
+    myresult4 = c.fetchall()
+    age = myresult4[3][0]
+    c.execute("select gender from Dog")
+    myresult5 = c.fetchall()
+    gender = myresult5[3][0]
+    c.execute("select color from Dog")
+    myresult6 = c.fetchall()
+    color = myresult6[3][0]
+    c.execute("select size from Dog")
+    myresult7 = c.fetchall()
+    size = myresult7[3][0]
+    c.execute("select location from Dog")
+    myresult8 = c.fetchall()
+    location = myresult8[3][0]
+    
+    # Compare expected and actual values for each data field.
+    # if condition returns true, print message; otherwise, AssertionError is raised
+    assert name == expected_name
+    assert description == expected_description
+    assert breed == expected_breed
+    assert age == expected_age
+    assert gender == expected_gender
+    assert color == expected_color
+    assert size == expected_size
+    assert location == expected_location
+
+    print("Test passed - Data used to render @app.route('/dog_45447002') matched as expected.")
+
+# call function    
+test_dog_454('Furever.db')
+
+
+# Function tests data used to render dog_48818187.html against data in Furever.db
+def test_dog_488(db_name):
+    # Connect to the database.
+    conn = sqlite3.connect(db_name)
+    c = conn.cursor()
+
+    # Query the Dog table for data associated with id=48818187
+    c.execute('''SELECT name, description, breed, age, gender, color, size, location
+                 FROM Dog WHERE id=48818187''')
+    expected_data = c.fetchone()
+
+    # Retrieve the expected values for each data field
+    expected_name = expected_data[0]
+    expected_description = expected_data[1]
+    expected_breed = expected_data[2]
+    expected_age = expected_data[3]
+    expected_gender = expected_data[4]
+    expected_color = expected_data[5]
+    expected_size = expected_data[6]
+    expected_location = expected_data[7]
+
+    # dog_488() code - retrieve values from table using exact code from function
+    c.execute("select name from Dog")
+    myresult = c.fetchall()
+    name =  myresult[4][0]
+    c.execute("select description from Dog")
+    myresult2 = c.fetchall()
+    description =  myresult2[4][0]
+    c.execute("select breed from Dog")
+    myresult3 = c.fetchall()
+    breed = myresult3[4][0]
+    c.execute("select age from Dog")
+    myresult4 = c.fetchall()
+    age = myresult4[4][0]
+    c.execute("select gender from Dog")
+    myresult5 = c.fetchall()
+    gender = myresult5[4][0]
+    c.execute("select color from Dog")
+    myresult6 = c.fetchall()
+    color = myresult6[4][0]
+    c.execute("select size from Dog")
+    myresult7 = c.fetchall()
+    size = myresult7[4][0]
+    c.execute("select location from Dog")
+    myresult8 = c.fetchall()
+    location = myresult8[4][0]
+    
+    # Compare expected and actual values for each data field.
+    # if condition returns true, print message; otherwise, AssertionError is raised
+    assert name == expected_name
+    assert description == expected_description
+    assert breed == expected_breed
+    assert age == expected_age
+    assert gender == expected_gender
+    assert color == expected_color
+    assert size == expected_size
+    assert location == expected_location
+
+    print("Test passed - Data used to render @app.route('/dog_48818187') matched as expected.")
+
+# call function    
+test_dog_488('Furever.db')
+
+###############################################################################################
+#                                  Cat Query Testing                                          #
+###############################################################################################
+
+# Function tests data used to render cat_51289678.html against data in Furever.db
+def test_cat_512(db_name):
+    # Connect to the database.
+    conn = sqlite3.connect(db_name)
+    c = conn.cursor()
+
+    # Query the Cat table for data associated with id=51289678
+    c.execute('''SELECT name, description, breed, age, gender, color, size, location
+                 FROM Cat WHERE id=51289678''')
+    expected_data = c.fetchone()
+
+    # Retrieve the expected values for each data field
+    expected_name = expected_data[0]
+    expected_description = expected_data[1]
+    expected_breed = expected_data[2]
+    expected_age = expected_data[3]
+    expected_gender = expected_data[4]
+    expected_color = expected_data[5]
+    expected_size = expected_data[6]
+    expected_location = expected_data[7]
+
+    # cat_512() code - retrieve values from table using exact code from function
+    c.execute("select name from Cat")
+    myresult = c.fetchall()
+    name =  myresult[0][0]
+    c.execute("select description from Cat")
+    myresult2 = c.fetchall()
+    description =  myresult2[0][0]
+    c.execute("select breed from Cat")
+    myresult3 = c.fetchall()
+    breed = myresult3[0][0]
+    c.execute("select age from Cat")
+    myresult4 = c.fetchall()
+    age = myresult4[0][0]
+    c.execute("select gender from Cat")
+    myresult5 = c.fetchall()
+    gender = myresult5[0][0]
+    c.execute("select color from Cat")
+    myresult6 = c.fetchall()
+    color = myresult6[0][0]
+    c.execute("select size from Cat")
+    myresult7 = c.fetchall()
+    size = myresult7[0][0]
+    c.execute("select location from Cat")
+    myresult8 = c.fetchall()
+    location = myresult8[0][0]
+    
+    # Compare expected and actual values for each data field.
+    # if condition returns true, print message; otherwise, AssertionError is raised
+    assert name == expected_name
+    assert description == expected_description
+    assert breed == expected_breed
+    assert age == expected_age
+    assert gender == expected_gender
+    assert color == expected_color
+    assert size == expected_size
+    assert location == expected_location
+
+    print("Test passed - Data used to render @app.route('/cat_51289678') matched as expected.")
+
+# call function    
+test_cat_512('Furever.db')
+
+
+# Function tests data used to render cat_52058185.html against data in Furever.db
+def test_cat_520(db_name):
+    # Connect to the database.
+    conn = sqlite3.connect(db_name)
+    c = conn.cursor()
+
+    # Query the Cat table for data associated with id=52058185
+    c.execute('''SELECT name, description, breed, age, gender, color, size, location
+                 FROM Cat WHERE id=52058185''')
+    expected_data = c.fetchone()
+
+    # Retrieve the expected values for each data field
+    expected_name = expected_data[0]
+    expected_description = expected_data[1]
+    expected_breed = expected_data[2]
+    expected_age = expected_data[3]
+    expected_gender = expected_data[4]
+    expected_color = expected_data[5]
+    expected_size = expected_data[6]
+    expected_location = expected_data[7]
+
+    # cat_520() code - retrieve values from table using exact code from function
+    c.execute("select name from Cat")
+    myresult = c.fetchall()
+    name =  myresult[1][0]
+    c.execute("select description from Cat")
+    myresult2 = c.fetchall()
+    description =  myresult2[1][0]
+    c.execute("select breed from Cat")
+    myresult3 = c.fetchall()
+    breed = myresult3[1][0]
+    c.execute("select age from Cat")
+    myresult4 = c.fetchall()
+    age = myresult4[1][0]
+    c.execute("select gender from Cat")
+    myresult5 = c.fetchall()
+    gender = myresult5[1][0]
+    c.execute("select color from Cat")
+    myresult6 = c.fetchall()
+    color = myresult6[1][0]
+    c.execute("select size from Cat")
+    myresult7 = c.fetchall()
+    size = myresult7[1][0]
+    c.execute("select location from Cat")
+    myresult8 = c.fetchall()
+    location = myresult8[1][0]
+    
+    # Compare expected and actual values for each data field.
+    # if condition returns true, print message; otherwise, AssertionError is raised
+    assert name == expected_name
+    assert description == expected_description
+    assert breed == expected_breed
+    assert age == expected_age
+    assert gender == expected_gender
+    assert color == expected_color
+    assert size == expected_size
+    assert location == expected_location
+
+    print("Test passed - Data used to render @app.route('/cat_52058185') matched as expected.")
+
+# call function    
+test_cat_520('Furever.db')
+
+
+# Function tests data used to render cat_52072231.html against data in Furever.db
+def test_cat_5207(db_name):
+    # Connect to the database.
+    conn = sqlite3.connect(db_name)
+    c = conn.cursor()
+
+    # Query the Cat table for data associated with id=52072231
+    c.execute('''SELECT name, description, breed, age, gender, color, size, location
+                 FROM Cat WHERE id=52072231''')
+    expected_data = c.fetchone()
+
+    # Retrieve the expected values for each data field
+    expected_name = expected_data[0]
+    expected_description = expected_data[1]
+    expected_breed = expected_data[2]
+    expected_age = expected_data[3]
+    expected_gender = expected_data[4]
+    expected_color = expected_data[5]
+    expected_size = expected_data[6]
+    expected_location = expected_data[7]
+
+    # cat_5207() code - retrieve values from table using exact code from function
+    c.execute("select name from Cat")
+    myresult = c.fetchall()
+    name =  myresult[2][0]
+    c.execute("select description from Cat")
+    myresult2 = c.fetchall()
+    description =  myresult2[2][0]
+    c.execute("select breed from Cat")
+    myresult3 = c.fetchall()
+    breed = myresult3[2][0]
+    c.execute("select age from Cat")
+    myresult4 = c.fetchall()
+    age = myresult4[2][0]
+    c.execute("select gender from Cat")
+    myresult5 = c.fetchall()
+    gender = myresult5[2][0]
+    c.execute("select color from Cat")
+    myresult6 = c.fetchall()
+    color = myresult6[2][0]
+    c.execute("select size from Cat")
+    myresult7 = c.fetchall()
+    size = myresult7[2][0]
+    c.execute("select location from Cat")
+    myresult8 = c.fetchall()
+    location = myresult8[2][0]
+    
+    # Compare expected and actual values for each data field.
+    # if condition returns true, print message; otherwise, AssertionError is raised
+    assert name == expected_name
+    assert description == expected_description
+    assert breed == expected_breed
+    assert age == expected_age
+    assert gender == expected_gender
+    assert color == expected_color
+    assert size == expected_size
+    assert location == expected_location
+
+    print("Test passed - Data used to render @app.route('/cat_52072231') matched as expected.")
+
+# call function    
+test_cat_5207('Furever.db')
+
+
+# Function tests data used to render cat_52106194.html against data in Furever.db
+def test_cat_521(db_name):
+    # Connect to the database.
+    conn = sqlite3.connect(db_name)
+    c = conn.cursor()
+
+    # Query the Cat table for data associated with id=52106194
+    c.execute('''SELECT name, description, breed, age, gender, color, size, location
+                 FROM Cat WHERE id=52106194''')
+    expected_data = c.fetchone()
+
+    # Retrieve the expected values for each data field
+    expected_name = expected_data[0]
+    expected_description = expected_data[1]
+    expected_breed = expected_data[2]
+    expected_age = expected_data[3]
+    expected_gender = expected_data[4]
+    expected_color = expected_data[5]
+    expected_size = expected_data[6]
+    expected_location = expected_data[7]
+
+    # cat_521() code - retrieve values from table using exact code from function
+    c.execute("select name from Cat")
+    myresult = c.fetchall()
+    name =  myresult[3][0]
+    c.execute("select description from Cat")
+    myresult2 = c.fetchall()
+    description =  myresult2[3][0]
+    c.execute("select breed from Cat")
+    myresult3 = c.fetchall()
+    breed = myresult3[3][0]
+    c.execute("select age from Cat")
+    myresult4 = c.fetchall()
+    age = myresult4[3][0]
+    c.execute("select gender from Cat")
+    myresult5 = c.fetchall()
+    gender = myresult5[3][0]
+    c.execute("select color from Cat")
+    myresult6 = c.fetchall()
+    color = myresult6[3][0]
+    c.execute("select size from Cat")
+    myresult7 = c.fetchall()
+    size = myresult7[3][0]
+    c.execute("select location from Cat")
+    myresult8 = c.fetchall()
+    location = myresult8[3][0]
+    
+    # Compare expected and actual values for each data field.
+    # if condition returns true, print message; otherwise, AssertionError is raised
+    assert name == expected_name
+    assert description == expected_description
+    assert breed == expected_breed
+    assert age == expected_age
+    assert gender == expected_gender
+    assert color == expected_color
+    assert size == expected_size
+    assert location == expected_location
+
+    print("Test passed - Data used to render @app.route('/cat_52106194') matched as expected.")
+
+# call function    
+test_cat_521('Furever.db')
+
+
+# Function tests data used to render cat_52167059.html against data in Furever.db
+def test_cat_5216(db_name):
+    # Connect to the database.
+    conn = sqlite3.connect(db_name)
+    c = conn.cursor()
+
+    # Query the Cat table for data associated with id=52167059
+    c.execute('''SELECT name, description, breed, age, gender, color, size, location
+                 FROM Cat WHERE id=52167059''')
+    expected_data = c.fetchone()
+
+    # Retrieve the expected values for each data field
+    expected_name = expected_data[0]
+    expected_description = expected_data[1]
+    expected_breed = expected_data[2]
+    expected_age = expected_data[3]
+    expected_gender = expected_data[4]
+    expected_color = expected_data[5]
+    expected_size = expected_data[6]
+    expected_location = expected_data[7]
+
+    # cat_5216() code - retrieve values from table using exact code from function
+    c.execute("select name from Cat")
+    myresult = c.fetchall()
+    name =  myresult[4][0]
+    c.execute("select description from Cat")
+    myresult2 = c.fetchall()
+    description =  myresult2[4][0]
+    c.execute("select breed from Cat")
+    myresult3 = c.fetchall()
+    breed = myresult3[4][0]
+    c.execute("select age from Cat")
+    myresult4 = c.fetchall()
+    age = myresult4[4][0]
+    c.execute("select gender from Cat")
+    myresult5 = c.fetchall()
+    gender = myresult5[4][0]
+    c.execute("select color from Cat")
+    myresult6 = c.fetchall()
+    color = myresult6[4][0]
+    c.execute("select size from Cat")
+    myresult7 = c.fetchall()
+    size = myresult7[4][0]
+    c.execute("select location from Cat")
+    myresult8 = c.fetchall()
+    location = myresult8[4][0]
+    
+    # Compare expected and actual values for each data field.
+    # if condition returns true, print message; otherwise, AssertionError is raised
+    assert name == expected_name
+    assert description == expected_description
+    assert breed == expected_breed
+    assert age == expected_age
+    assert gender == expected_gender
+    assert color == expected_color
+    assert size == expected_size
+    assert location == expected_location
+
+    print("Test passed - Data used to render @app.route('/cat_52167059') matched as expected.")
+
+# call function    
+test_cat_5216('Furever.db')
