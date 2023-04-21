@@ -3,7 +3,7 @@ import prefix
 from flask import Flask, url_for, make_response, render_template, request, json
 from markupsafe import escape
 import sqlite3
-import psycopg2
+#import psycopg2
 
 
 
@@ -197,31 +197,35 @@ def dog_366():
     return render_template('dog_36636186.html',name=name, description=description, breed=breed, age=age, gender=gender, color=color,size=size, location=location)
 @app.route('/dog_42904054')
 def dog_429():
-    c.execute("select name from Dog")
-    myresult = c.fetchall()
-    name =  myresult[1][0]
-    c.execute("select description from Dog")
-    myresult2 = c.fetchall()
-    description =  myresult2[1][0]
-    c.execute("select breed from Dog")
-    myresult3 = c.fetchall()
-    breed = myresult3[1][0]
-    c.execute("select age from Dog")
-    myresult4 = c.fetchall()
-    age = myresult4[1][0]
-    c.execute("select gender from Dog")
-    myresult5 = c.fetchall()
-    gender = myresult5[1][0]
-    c.execute("select color from Dog")
-    myresult6 = c.fetchall()
-    color = myresult6[1][0]
-    c.execute("select size from Dog")
-    myresult7 = c.fetchall()
-    size = myresult7[1][0]
-    c.execute("select location from Dog")
-    myresult8 = c.fetchall()
-    location = myresult8[1][0]
+    # c.execute("select name from Dog")
+    # myresult = c.fetchall()
+    # name =  myresult[1][0]
+    # c.execute("select description from Dog")
+    # myresult2 = c.fetchall()
+    # description =  myresult2[1][0]
+    # c.execute("select breed from Dog")
+    # myresult3 = c.fetchall()
+    # breed = myresult3[1][0]
+    # c.execute("select age from Dog")
+    # myresult4 = c.fetchall()
+    # age = myresult4[1][0]
+    # c.execute("select gender from Dog")
+    # myresult5 = c.fetchall()
+    # gender = myresult5[1][0]
+    # c.execute("select color from Dog")
+    # myresult6 = c.fetchall()
+    # color = myresult6[1][0]
+    # c.execute("select size from Dog")
+    # myresult7 = c.fetchall()
+    # size = myresult7[1][0]
+    # c.execute("select location from Dog")
+    # myresult8 = c.fetchall()
+    # location = myresult8[1][0]
+    c.execute("SELECT name, description, breed, age, gender, color, size, location FROM Dog")
+    myresult = c.fetchall()[1]
+    name, description, breed, age, gender, color, size, location = myresult
     return render_template('dog_42904054.html',name=name, description=description, breed=breed, age=age, gender=gender, color=color,size=size, location=location)
+
 @app.route('/dog_43078721')
 def dog_430():
     c.execute("select name from Dog")
@@ -303,6 +307,68 @@ def dog_488():
     myresult8 = c.fetchall()
     location = myresult8[4][0]
     return render_template('dog_48818187.html',name=name, description=description, breed=breed, age=age, gender=gender, color=color,size=size, location=location)
+@app.route('/dog_50272539')
+def dog_5027():
+  
+    c.execute("SELECT name, description, breed, age, gender, color, size, location FROM Dog")
+    myresult = c.fetchall()[5]
+    name, description, breed, age, gender, color, size, location = myresult
+    return render_template('dog_50272539.html',name=name, description=description, breed=breed, age=age, gender=gender, color=color,size=size, location=location)
+@app.route('/dog_51599202')
+def dog_515():
+    c.execute("SELECT name, description, breed, age, gender, color, size, location FROM Dog")
+    myresult = c.fetchall()[6]
+    name, description, breed, age, gender, color, size, location = myresult
+    return render_template('dog_51599202.html',name=name, description=description, breed=breed, age=age, gender=gender, color=color,size=size, location=location)
+@app.route('/dog_51962699')
+def dog_519():
+    c.execute("SELECT name, description, breed, age, gender, color, size, location FROM Dog")
+    myresult = c.fetchall()[7]
+    name, description, breed, age, gender, color, size, location = myresult
+    return render_template('dog_51962699.html',name=name, description=description, breed=breed, age=age, gender=gender, color=color,size=size, location=location)
+@app.route('/dog_52006141')
+def dog_5200():
+    c.execute("SELECT name, description, breed, age, gender, color, size, location FROM Dog")
+    myresult = c.fetchall()[8]
+    name, description, breed, age, gender, color, size, location = myresult
+    return render_template('dog_52006141.html',name=name, description=description, breed=breed, age=age, gender=gender, color=color,size=size, location=location)
+@app.route('/dog_52053831')
+def dog_5205():
+    c.execute("SELECT name, description, breed, age, gender, color, size, location FROM Dog")
+    myresult = c.fetchall()[9]
+    name, description, breed, age, gender, color, size, location = myresult
+    return render_template('dog_52053831.html',name=name, description=description, breed=breed, age=age, gender=gender, color=color,size=size, location=location)
+@app.route('/dog_52086329')
+def dog_5208():
+    c.execute("SELECT name, description, breed, age, gender, color, size, location FROM Dog")
+    myresult = c.fetchall()[10]
+    name, description, breed, age, gender, color, size, location = myresult
+    return render_template('dog_52086329.html',name=name, description=description, breed=breed, age=age, gender=gender, color=color,size=size, location=location)
+@app.route('/dog_50858047')
+def dog_5085():
+    c.execute("SELECT name, description, breed, age, gender, color, size, location FROM Dog")
+    myresult = c.fetchall()[11]
+    name, description, breed, age, gender, color, size, location = myresult
+    return render_template('dog_50858047.html',name=name, description=description, breed=breed, age=age, gender=gender, color=color,size=size, location=location)
+@app.route('/dog_52129288')
+def dog_52129288():
+    c.execute("SELECT name, description, breed, age, gender, color, size, location FROM Dog")
+    myresult = c.fetchall()[12]
+    name, description, breed, age, gender, color, size, location = myresult
+    return render_template('dog_52129288.html',name=name, description=description, breed=breed, age=age, gender=gender, color=color,size=size, location=location)
+@app.route('/dog_52129291')
+def dog_5212921():
+    c.execute("SELECT name, description, breed, age, gender, color, size, location FROM Dog")
+    myresult = c.fetchall()[13]
+    name, description, breed, age, gender, color, size, location = myresult
+    return render_template('dog_52129291.html',name=name, description=description, breed=breed, age=age, gender=gender, color=color,size=size, location=location)
+@app.route('/dog_52091971')
+def dog_520919():
+    c.execute("SELECT name, description, breed, age, gender, color, size, location FROM Dog")
+    myresult = c.fetchall()[14]
+    name, description, breed, age, gender, color, size, location = myresult
+    return render_template('dog_52091971.html',name=name, description=description, breed=breed, age=age, gender=gender, color=color,size=size, location=location)
+
 # # 5 ids for cat page 
 @app.route('/cat_51289678')
 def cat_512():
