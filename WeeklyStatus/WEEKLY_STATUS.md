@@ -232,13 +232,13 @@ No obstacles this week.
 ## Meeting 2 Friday 4/21
 #### Frontend
 <br>
-<img src="Wk10_mtg2_FrontEnd.png" alt="Wk10FrontEnd" WIDTH=50% ALIGH="LEFT"/>
+<img src="Wk10_mtg2_FrontEnd.png" alt="Wk10FrontEnd" WIDTH=50% ALIGH="LEFT"/><br>
 * Continue working all drop down selections for cat and dog search pages so that it can load animal based on preferences
 * Discussed on criteria of screening (breed/ age (float)/ color)
 
 #### Backend
 <br>
-<img src="Wk10_mtg2_BackEnd.png" alt="Wk10BackEnd" WIDTH=50% ALIGH="LEFT"/>
+<img src="Wk10_mtg2_BackEnd.png" alt="Wk10BackEnd" WIDTH=50% ALIGH="LEFT"/><br>
 * Rendered data pulled from SQL onto Webpage
 * Discussed how we test the search function
 
