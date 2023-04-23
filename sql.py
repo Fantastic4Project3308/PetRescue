@@ -145,7 +145,7 @@ dog7_dict = {
     'breed':'Bulldog',
     'age': '2',
     'gender': 'Male',
-    'color': 'Brindle',
+    'color': 'Black',
     'size': 'Large',
     'location': 'Dog Kennels'
 }
@@ -153,8 +153,8 @@ dog8_dict = {
     'id':51962699,
     'name': 'Debo',
     'description': "Very affectionate and loves attention. He looks so serious in his photos - but he is not! What we love most is that Debo is a young pup with a lot of energy and a lot of love to give. He is already learned Sit, Down and Touch. What he loves most: Debo loves to explore and sniff everything in sight. He hasn't really figured out fetch yet, but he's eager to learn new things and loves to please his humans. He also loves attention and cuddles, and he's always up for a good belly rub.",
-    'breed':'Shepard',
-    'age': '.5',
+    'breed':'Rottweiler',
+    'age': '0.5',
     'gender': 'Male',
     'color': 'Black',
     'size': 'Large',
@@ -213,7 +213,7 @@ dog13_dict = {
     'id':52129288,
     'name': 'Cotton',
     'description': "Hello, my name is Cotton! I enjoy walks and playing with my sister Nova. I'm a friendly dog that loves to hangout!",
-    'breed':'Siberian Husky',
+    'breed':'Alaskan Husky',
     'age': '3',
     'gender': 'Male',
     'color': 'White',
@@ -235,7 +235,7 @@ dog14_dict = {
 }
 dog15_dict = {
     'id':52091971,
-    'name': 'Pickles',
+    'name': 'Steelhead',
     'description': "Steelhead is a young guy who is bouncy and full of fun! He gets along with other dogs and loves all the people he has met.",
     'breed':'American Pit Bull/Mix',
     'age': '0.5',
