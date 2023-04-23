@@ -166,7 +166,7 @@ def dogpage():
     petIDSet = get_filtered_petIDs(petType);
     return render_template('DogPage.html', petIDSet=petIDSet, petType=petType)
 
-# 5 ids for dogs page 
+# 15 ids for dogs page 
 @app.route('/dog_36636186')
 def dog_366():
     c.execute("SELECT name, description, breed, age, gender, color, size, location FROM Dog")
@@ -212,11 +212,13 @@ def dog_430():
     return render_template('dog_43078721.html',name=name, description=description, breed=breed, age=age, gender=gender, color=color,size=size, location=location)
 @app.route('/dog_45447002')
 def dog_454():
+    c.execute("SELECT name, description, breed, age, gender, color, size, location FROM Dog")
     myresult = c.fetchall()[3]
     name, description, breed, age, gender, color, size, location = myresult
     return render_template('dog_45447002.html',name=name, description=description, breed=breed, age=age, gender=gender, color=color,size=size, location=location)
 @app.route('/dog_48818187')
 def dog_488():
+    c.execute("SELECT name, description, breed, age, gender, color, size, location FROM Dog")
     myresult = c.fetchall()[4]
     name, description, breed, age, gender, color, size, location = myresult
     return render_template('dog_48818187.html',name=name, description=description, breed=breed, age=age, gender=gender, color=color,size=size, location=location)
