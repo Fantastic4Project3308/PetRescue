@@ -103,23 +103,12 @@ def contacts():
     return render_template('userInformation.html', contacts = contacts)
 
 #helper function for both dog and cat search pages
-def get_filtered_petIDs(petType):
+def get_filtered_petIDs(petType, breed, age, size, gender, color):
     ''' 
     Input validation/fix.
     '''
     if petType != 'Dog': petType = 'Cat';
     
-    '''
-    Get multiple attributes of pets from the user input.
-    The default value is a Kleen star if unassigned.
-    '''
-    petType = 'Dog';
-    breed = request.args.get('breed', '*');
-    age = request.args.get('age', '*');
-    size = request.args.get('size', '*');
-    gender = request.args.get('gender', '*');
-    color = request.args.get('color', '*');
-    print('bread: ', breed, 'age: ', age, 'size: ', size, 'gender: ', gender, 'color: ', color);
     '''
     Instantiate an empty set to collect IDs of user-preferred pets.
     Find the intersection of pet IDs among different attributes.
@@ -134,19 +123,26 @@ def get_filtered_petIDs(petType):
     allPets = c.fetchall();
     
     for pet in allPets: 
-        if breed == '*' or breed in pet[3]: petIDsByBreed.add(pet[0]);
+        if breed == 'Any' or breed in pet[3]: petIDsByBreed.add(pet[0]);
     
     for pet in allPets:
-        if age == '*' or pet[4] == age: petIDsByAge.add(pet[0]);
+        if age == 'Any': petIDsByAge.add(pet[0]);
+        else:
+            print(age)
+            ageRange = age.split('-');
+            print('ageRange[0] ', ageRange[0])
+            minAge = float(ageRange[0]);
+            maxAge = float(ageRange[1]);
+            if minAge < pet[4] and pet[4] <= maxAge: petIDsByAge.add(pet[0]);
 
     for pet in allPets:
-        if size == '*' or pet[7] == size: petIDsBySize.add(pet[0]);
+        if size == 'Any' or pet[7] == size: petIDsBySize.add(pet[0]);
     
     for pet in allPets:
-        if gender == '*' or pet[5] == gender: petIDsByGender.add(pet[0]);
+        if gender == 'Any' or pet[5] == gender: petIDsByGender.add(pet[0]);
     
     for pet in allPets: 
-        if color == '*' or pet[6] == color: petIDsByColor.add(pet[0]);
+        if color == 'Any' or pet[6] == color: petIDsByColor.add(pet[0]);
     
     petIDSet = petIDsByBreed.intersection(petIDsByAge).intersection(petIDsBySize).intersection(petIDsByGender).intersection(petIDsByColor);
     
@@ -156,15 +152,35 @@ def get_filtered_petIDs(petType):
 @app.route('/cats')
 def catpage():
     petType = 'Cat'
-    petIDSet = get_filtered_petIDs(petType);
-    return render_template('CatPage.html', petIDSet=petIDSet, petType=petType)
+    '''
+    Get multiple attributes of pets from the user input.
+    The default value is a Kleen star if unassigned.
+    '''
+    breed = request.args.get('breed', 'Any').replace('%20', ' ');
+    age = request.args.get('age', 'Any');
+    size = request.args.get('size', 'Any');
+    gender = request.args.get('gender', 'Any');
+    color = request.args.get('color', 'Any');
+    petIDSet = get_filtered_petIDs(petType, breed, age, size, gender, color);
+    
+    return render_template('CatPage.html', petIDSet=petIDSet, petType=petType, breed=breed, age=age, size=size, gender=gender, color=color)
 
 #dog page
 @app.route('/dogs')
 def dogpage():
     petType = 'Dog'
-    petIDSet = get_filtered_petIDs(petType);
-    return render_template('DogPage.html', petIDSet=petIDSet, petType=petType)
+    '''
+    Get multiple attributes of pets from the user input.
+    The default value is a Kleen star if unassigned.
+    '''
+    breed = request.args.get('breed', 'Any').replace('%20', ' ');
+    age = request.args.get('age', 'Any');
+    size = request.args.get('size', 'Any');
+    gender = request.args.get('gender', 'Any');
+    color = request.args.get('color', 'Any');
+    petIDSet = get_filtered_petIDs(petType, breed, age, size, gender, color);
+    
+    return render_template('DogPage.html', petIDSet=petIDSet, petType=petType, breed=breed, age=age, size=size, gender=gender, color=color)
 
 # 15 ids for dogs page 
 @app.route('/dog_36636186')

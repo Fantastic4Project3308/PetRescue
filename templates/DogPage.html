@@ -18,6 +18,9 @@
             #button-container {
                 padding-top: 1rem;
             }
+            #age-input {
+                display: flex;
+            }
         </style>
     </head>
     <body>
@@ -37,19 +40,26 @@
                       <label for="breed">BREED</label>
                       <select name="breed" id="breed">
                         <option value="Any">Any</option>
+                        <option value="American Pit Bull">American Pit Bull</option>
+                        <option value="Border Collie">Border Collie</option>
+                        <option value="Bulldog">Bulldog</option>
+                        <option value="Chihuaha">Chihuaha</option>
+                        <option value="Husky">Husky</option>
                         <option value="Mix">Mix</option>
-                        <option value="French Bulldogs">French Bulldogs</option>
-                        <option value="Labrador Retrievers">Labrador Retrievers</option>
-                        <option value="Golden Retrievers">Golden Retrievers</option>
-                        <option value="German Shepherd Dogs">German Shepherd Dogs</option>
+                        <option value="Pinscher">Pinscher</option>
+                        <option value="Pit Bull">Pit Bull</option>
+                        <option value="Rottweiler">Rottweiler</option>
+                        <option value="Shepherd">Shepherd</option>
+                        <option value="Terrier">Terrier</option>
                       </select>
-                      <label for="age">AGE(month)</label>
+                      <label for="age">AGE</label>
                       <select name="age" id="age">
                         <option value="Any">Any</option>
-                        <option value="3">0-3</option>
-                        <option value="6">3-6</option>
-                        <option value="12">6-12</option>
-                        <option value="13">12+</option>
+                        <option value="0-1">Year &#8804; 1</option>
+                        <option value="1-5">1 &lt; Year &#8804; 5</option>
+                        <option value="5-10">5 &lt; Year &#8804; 10</option>
+                        <option value="10-15">10 &lt; Year &#8804; 15</option>
+                        <option value="15-20">&#62; 15 Year</option>
                       </select>
                       <label for="size">SIZE</label>
                       <select name="size" id="size">
@@ -67,12 +77,12 @@
                       <label for="color">COLOR</label>
                       <select name="color" id="color">
                         <option value="Any">Any</option>
-                        <option value="White">White</option>
-                        <option value="Gray">Gray</option>
                         <option value="Black">Black</option>
-                        <option value="Yellow">Yellow</option>
+                        <option value="Brindle">Yellow</option>
                         <option value="Brown">Brown</option>
+                        <option value="Tan">Gray</option>
                         <option value="Mixed">Mixed</option>
+                        <option value="White">White</option>
                       </select>
                       <div id="button-container">
                         <input type="button" value="SEARCH" id="search">
@@ -81,13 +91,14 @@
                 </div>
             </aside>
             <section>
+                <article class="article-div">Search result for: breed = {{breed}}, age = {{age}}, size = {{size}}, gender = {{gender}}, color = {{color}}.<article>
                 <article class="article-div">
                 <ul>
                 {% for petID in petIDSet %}
                     <li>
                         <a href="{{petType.lower()}}_{{petID}}" target="_blank">
-                            <img src="static/{{petID}}.jpg" alt="{{petType}}" />
-                            <p>Pet ID: {{petID}}</p>
+                            <img src="static/petImages/{{petType.lower()}}/{{petID}}.jpg" alt="{{petType}}" />
+                            <p>Animal ID: {{petID}}</p>
                         </a>
                     </li>
                 {% endfor %}
@@ -100,14 +111,15 @@
         </footer>
         <script>
         const searchButton = document.getElementById('search');
+            
         searchButton.addEventListener('click', () => {
             const currURL = window.location.href;
             let nextURL = `${currURL.substring(0, currURL.lastIndexOf('dogs?'))}dogs?`
-            if (document.getElementById('breed')['value'] !== 'Any') nextURL += `breed=${document.getElementById('breed')['value']}&`
-            if (document.getElementById('age')['value'] !== 'Any') nextURL += `age=${document.getElementById('age')['value']}&`
-            if (document.getElementById('size')['value'] !== 'Any') nextURL += `size=${document.getElementById('size')['value']}&`;
-            if (document.getElementById('gender')['value'] !== 'Any') nextURL += `gender=${document.getElementById('gender')['value']}&`;
-            if (document.getElementById('color')['value'] !== 'Any') nextURL += `color=${document.getElementById('color')['value']}&`;
+            nextURL += `breed=${document.getElementById('breed')['value'].replaceAll(' ', '%20')}&`
+            nextURL += `age=${document.getElementById('age')['value']}&`
+            nextURL += `size=${document.getElementById('size')['value']}&`;
+            nextURL += `gender=${document.getElementById('gender')['value']}&`;
+            nextURL += `color=${document.getElementById('color')['value']}&`;
             window.location.href = nextURL;
         });
         </script>

@@ -37,19 +37,20 @@
                       <label for="breed">BREED</label>
                       <select name="breed" id="breed">
                         <option value="Any">Any</option>
+                        <option value="Domestic Longhair">Domestic Long Hair</option>
+                        <option value="Domestic Medium Hair">Domestic Medium Hair</option>
+                        <option value="Domestic Shorthair">Domestic Short Hair</option>
                         <option value="Mix">Mix</option>
-                        <option value="French Bulldogs">French Bulldogs</option>
-                        <option value="Labrador Retrievers">Labrador Retrievers</option>
-                        <option value="Golden Retrievers">Golden Retrievers</option>
-                        <option value="German Shepherd Dogs">German Shepherd Dogs</option>
+                        <option value="Siamese">Siamese</option>
                       </select>
-                      <label for="age">AGE(month)</label>
+                      <label for="age">AGE</label>
                       <select name="age" id="age">
                         <option value="Any">Any</option>
-                        <option value="3">0-3</option>
-                        <option value="6">3-6</option>
-                        <option value="12">6-12</option>
-                        <option value="13">12+</option>
+                        <option value="0-1">Year &#8804; 1</option>
+                        <option value="1-3">1 &lt; Year &#8804; 3</option>
+                        <option value="3-6">3 &lt; Year &#8804; 6</option>
+                        <option value="6-12">6 &lt; Year &#8804; 12</option>
+                        <option value="12-20">&#62; 12 Year</option>
                       </select>
                       <label for="size">SIZE</label>
                       <select name="size" id="size">
@@ -67,12 +68,12 @@
                       <label for="color">COLOR</label>
                       <select name="color" id="color">
                         <option value="Any">Any</option>
-                        <option value="White">White</option>
-                        <option value="Gray">Gray</option>
                         <option value="Black">Black</option>
-                        <option value="Yellow">Yellow</option>
                         <option value="Brown">Brown</option>
                         <option value="Mixed">Mixed</option>
+                        <option value="Orange">Gray</option>
+                        <option value="Seal">Yellow</option>
+                        <option value="White">White</option>
                       </select>
                       <div id="button-container">
                         <button type="submit">SEARCH</button>
@@ -81,13 +82,14 @@
                 </div>
             </aside>
             <section>
+                <article class="article-div">Search result for: breed = {{breed}}, age = {{age}}, size = {{size}}, gender = {{gender}}, color = {{color}}.<article>
                 <article class="article-div">
                 <ul>
                 {% for petID in petIDSet %}
                     <li>
                         <a href="{{petType.lower()}}_{{petID}}" target="_blank">
-                            <img src="static/{{petID}}.jpg" alt="{{petType}}" />
-                            <p>Pet ID: {{petID}}</p>
+                            <img src="static/petImages/{{petType.lower()}}/{{petID}}.jpg" alt="{{petType}}" />
+                            <p>Animal ID: {{petID}}</p>
                         </a>
                     </li>
                 {% endfor %}
@@ -102,12 +104,12 @@
         const searchButton = document.getElementById('search');
         searchButton.addEventListener('click', () => {
             const currURL = window.location.href;
-            let nextURL = `${currURL.substring(0, currURL.lastIndexOf('dogs?'))}dogs?`
-            if (document.getElementById('breed')['value'] !== 'Any') nextURL += `breed=${document.getElementById('breed')['value']}&`
-            if (document.getElementById('age')['value'] !== 'Any') nextURL += `age=${document.getElementById('age')['value']}&`
-            if (document.getElementById('size')['value'] !== 'Any') nextURL += `size=${document.getElementById('size')['value']}&`;
-            if (document.getElementById('gender')['value'] !== 'Any') nextURL += `gender=${document.getElementById('gender')['value']}&`;
-            if (document.getElementById('color')['value'] !== 'Any') nextURL += `color=${document.getElementById('color')['value']}&`;
+            let nextURL = `${currURL.substring(0, currURL.lastIndexOf('cats?'))}cats?`
+            nextURL += `breed=${document.getElementById('breed')['value'].replaceAll(' ', '%20')}&`
+            nextURL += `age=${document.getElementById('age')['value']}&`
+            nextURL += `size=${document.getElementById('size')['value']}&`;
+            nextURL += `gender=${document.getElementById('gender')['value']}&`;
+            nextURL += `color=${document.getElementById('color')['value']}&`;
             window.location.href = nextURL;
         });
         </script>
