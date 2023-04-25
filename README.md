@@ -64,52 +64,59 @@ This repository contains the following files and directories:
     .
     ├── Furever.db
     ├── sql.py    
-    ├── Furever.py  <== cloned, original from Lab 6 assignment
+    ├── Furever.py
     ├── static
-        ├── 
-    │   ├── 
-    │   └── . . .
+    │   ├── style.css
+    │   ├── searchPage.js
+    │   ├── (png files)
+    │   └──  petImages 
     │── templates
-    │   ├── 
-    │   ├── 
-    │   ├── 
-    │   ├── 
-    │   └──  
+    │   ├── AboutUs.html
+    │   ├── AdaptionForm.html
+    │   ├── CatPage.html
+    │   ├── DogPage.html
+    │   ├── UserInformation.html
+    │   └── ... (each dog and cat html files)
     ├── SQL_TESTING.md
     ├── Test_Queries.py
     ├── Test_Tables.py
     ├── setup.cmds <== cloned, original from CSPB3308 Lab 6 assignment
     ├── wsgi.py
-    ├── prefix.py 
+    ├── prefix.py  <== cloned, original from Lab 6 assignment
     ├── requirements.txt
     ├── WebsiteDesign
     │   └──  . . .
     ├── WeeklyStatus
-    │   └── . . . <== include weekly activity report & minuites
+    │   └── . . . 
     └── README.md <== YOU ARE HERE
 
     ```
     |Filename | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Description |
     |--- |--- |--- |
-    | Furever.db || xxx |
-    | sql.py || xxx |
+    | Furever.db || SQLite database for the Furever project |
+    | sql.py || Python file containing SQL-related functions |
     | Furever.py || project code for Flask app with calls to **prefix.py** |
-    | xxx || xxx |
-    | samples || directory with files used for page generation |
-    | static || directory with files needed for page display |
-    | &nbsp;&nbsp;&nbsp;css || directory with files for xxx |
-    | &nbsp;&nbsp;&nbsp;images || directory with images for xxx |
-    | templates || directory with template HTML for rendering test pages for **prefix.py** and **Furever.py** |
-    | SQL_TESTING.md || xxx |
-    | Test_Queries.py || xxx |
-    | Test_Tables.py || xxx |
-    | setup.cmds || commands to setup a shell to run a Flask app |
+    | static ||Directory with files needed for page display |
+    | &nbsp;&nbsp;&nbsp; style.css || CSS file for styling the webpages |
+    | &nbsp;&nbsp;&nbsp; searchPage.js || JavaScript file for search functionality on the page |
+    | &nbsp;&nbsp;&nbsp; (png files) || Various PNG files used in the project |
+    | &nbsp;&nbsp;&nbsp; petImages || Directory with images for dogs and cats |
+    | templates || Directory with template HTML for rendering test pages|
+    | &nbsp;&nbsp;&nbsp; AboutUs.html || HTML file for About Us page |
+    | &nbsp;&nbsp;&nbsp; AdaptionForm.html || HTML file for Adoption Form page |
+    | &nbsp;&nbsp;&nbsp; CatPage.html || HTML file for Cat Page |
+    | &nbsp;&nbsp;&nbsp; DogPage.html || HTML file for Dog Page |
+    | &nbsp;&nbsp;&nbsp; UserInformation.html || HTML file for User Information page |
+    | SQL_TESTING.md || Markdown file for documenting SQL testing and results |
+    | Test_Queries.py || Python file for testing SQL queries |
+    | Test_Tables.py || Python file for testing SQL tables |
+    | setup.cmds || Commands to setup a shell to run a Flask app |
     | wsgi.py || commands to setup a shell to deploy at Render.com |
-    | prefix.py || Flask app containing routines needed to run web service on csel.io virtual machine with access from local browser |
-    | requirements.txt || xxx |
-    | WebsiteDesign || include desing drafts from Milestone 2-4 |
-    | WeeklyStatus || include weekly activity report & minuites |
-    | README.md | | general information about this project|
+    | prefix.py || Flask app containing routines needed to run web service |
+    | requirements.txt || Text file with required Python packages for the project for the public deployment |
+    | WebsiteDesign || Directory including design drafts from Milestone 2-4 |
+    | WeeklyStatus || Directory including weekly activity reports and minutes |
+    | README.md | | General information about this project|
     <br>
 9. Documentation
     - This 'README.md' is the main documentation describing overview of this project.

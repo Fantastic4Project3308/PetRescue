@@ -12,7 +12,7 @@ Access our Trello board [here](https://trello.com/w/fantasticfour82).
 ## Link to 5 minute video: a demo for a potential customer (could be same one you used in the presentation)
 
 ## Version control repository link
-* Access out GItHub repositoty commit history [here] (https://github.com/Fantastic4Project3308/PetRescue/commits/main)
+* Access out GItHub repositoty commit history [here](https://github.com/Fantastic4Project3308/PetRescue/commits/main)
 * Access our Trello board [here](https://trello.com/w/fantasticfour82).
 
 ## Final Status Report
@@ -21,4 +21,4 @@ What you completed
 # What you were in the middle of implementing
 * What you had planned for the future
 * Any known problems (bugs, issues)
-* Access our website via public hosting site [here] (https://fureverpet.onrender.com/))
+* Access our website via public hosting site [here](https://fureverpet.onrender.com/).
