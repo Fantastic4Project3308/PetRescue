@@ -128,9 +128,9 @@ def get_filtered_petIDs(petType, breed, age, size, gender, color):
     for pet in allPets:
         if age == 'Any': petIDsByAge.add(pet[0]);
         else:
-            print(age)
+            #print(age)
             ageRange = age.split('-');
-            print('ageRange[0] ', ageRange[0])
+            #print('ageRange[0] ', ageRange[0])
             minAge = float(ageRange[0]);
             maxAge = float(ageRange[1]);
             if minAge < pet[4] and pet[4] <= maxAge: petIDsByAge.add(pet[0]);

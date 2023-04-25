@@ -1194,65 +1194,65 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         conn.close() 
 
         
-#     def test_valid_input6(self):
-#         # Connect to the database
-#         conn = sqlite3.connect('Furever.db')
-#         c = conn.cursor()
+    def test_valid_input6(self):
+        # Connect to the database
+        conn = sqlite3.connect('Furever.db')
+        c = conn.cursor()
         
-#         # Define filter criteria
-#         petType = 'Dog'
-#         breed = 'Any'
-#         age = '2-4' # specify an age range instead of a single age
-#         gender = 'Any'
-#         color = 'Any'
-#         size = 'Any'
+        # Define filter criteria
+        petType = 'Dog'
+        breed = 'Any'
+        age = '1-4' # get_filtered_petIDs uses an exclusive min and inclusive so we are really testing ages 2, 3, & 4
+        gender = 'Any'
+        color = 'Any'
+        size = 'Any'
         
-#         # Split the age range into minimum and maximum age values
-#         min_age, max_age = age.split('-')
+        # Split the age range into minimum and maximum age values
+        min_age, max_age = age.split('-')
 
-#         # Create a SQL query to retrieve the pet IDs that match the filter criteria
-#         # Start with a basic query to select all pets within the specified age range
-#         # Initialize the parameters tuple with the minimum and maximum age filters
-#         query = "SELECT id FROM Dog WHERE age >= ? AND age <= ?" 
-#         params = (min_age, max_age) 
+        # Create a SQL query to retrieve the pet IDs that match the filter criteria
+        # Start with a basic query to select all pets within the specified age range
+        # Initialize the parameters tuple with the minimum and maximum age filters
+        query = "SELECT id FROM Dog WHERE age > ? AND age <= ?" 
+        params = (min_age, max_age) 
         
-#         # Debug: print the SQL query and parameters
-#         print(f"SQL query: {query}")
-#         print(f"Parameters: {params}")
+        # Debug: print the SQL query and parameters
+        print(f"SQL query: {query}")
+        print(f"Parameters: {params}")
 
-#         # If filters were specified, add them to the query
-#         # Add the filters to the parameters tuple
-#         if breed != 'Any':
-#             query += " AND breed=?" 
-#             params += (breed,)  
-#         if color != 'Any':
-#             query += " AND color=?" 
-#             params += (color,)  
-#         if gender != 'Any':
-#             query += " AND gender=?"  
-#             params += (gender,) 
-#         if size != 'Any':
-#             query += " AND size=?" 
-#             params += (size,) 
+        # If filters were specified, add them to the query
+        # Add the filters to the parameters tuple
+        if breed != 'Any':
+            query += " AND breed=?" 
+            params += (breed,)  
+        if color != 'Any':
+            query += " AND color=?" 
+            params += (color,)  
+        if gender != 'Any':
+            query += " AND gender=?"  
+            params += (gender,) 
+        if size != 'Any':
+            query += " AND size=?" 
+            params += (size,) 
         
-#         # Execute the SQL query and store the results in a set
-#         c.execute(query, params)
-#         sql_output = c.fetchall()
-#         expected_output = set([x[0] for x in sql_output])
-#         print(f"test_valid_input6 - expected output: {expected_output}")
+        # Execute the SQL query and store the results in a set
+        c.execute(query, params)
+        sql_output = c.fetchall()
+        expected_output = set([x[0] for x in sql_output])
+        print(f"test_valid_input6 - expected output: {expected_output}")
         
-#         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
-#         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
-#                 petType, breed, age, size, gender, color)):
-#             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
-#             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-#             print(f"test_valid_input6 - result from get_filtered_petIDs: {result}")
+        # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
+        with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
+                petType, breed, age, size, gender, color)):
+            # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
+            result = get_filtered_petIDs(petType, breed, age, size, gender, color)
+            print(f"test_valid_input6 - result from get_filtered_petIDs: {result}")
             
-#             # Check that the result matches the expected output
-#             self.assertEqual(result, expected_output)
+            # Check that the result matches the expected output
+            self.assertEqual(result, expected_output)
         
-#         # Close the database connection
-#         conn.close() 
+        # Close the database connection
+        conn.close() 
         
     
     def test_valid_input7(self):
