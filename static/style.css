@@ -21,6 +21,9 @@ header {
      text-align: center;
      background-color: white;
 }
+.title span, img {
+    cursor: pointer;
+}
 nav {
     background-color: #F0F0F0;
     display: flex;

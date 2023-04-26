@@ -1,12 +1,26 @@
 #!/usr/bin/python3
+
+#===============================================================================
+# Furever.py hosts the backend sever for FurEver Pet.
+# Furever.py uses the Flask micro web framework, for more information please
+# check out: https://flask.palletsprojects.com/en/2.2.x/quickstart/
+#
+# Webpages to cover:
+# '/' -- Homepage, the entry of Furever Pet
+# '/aboutus' -- About the authors, mission statement, privacy policy, and the contact information
+# '/adoptionform' -- provides a real adpotion form to simulate the adoption process
+# '/contact' -- adds new contacts to the "Contact" table in the database, update the User Information page
+# '/cats' -- the search and display tool to retrieve cats with user-selected cat features 
+# '/dogs' -- the search and display tool to retrieve cats with user-selected dog features
+# '/cat_*' -- individual cat pages
+# '/dog_*' -- individual dog pages
+#===============================================================================
+
 import prefix
 from flask import Flask, url_for, make_response, render_template, request, json
 from markupsafe import escape
 import sqlite3
 #import psycopg2
-
-
-
 
 conn = sqlite3.connect('Furever.db', check_same_thread=False)
 c = conn.cursor()
@@ -27,16 +41,17 @@ def query_db(query, args=(), one=False):
 @app.route('/prefix_url')  
 def prefix_url():
     return 'The URL for this page is {}'.format(url_for('prefix_url'))
+
 #homepage
 @app.route('/')
 def homepage():
-    #cat_url = url_for('catpage')
-    #dog_url = url_for('dogpage')
     return render_template('Homepage.html')
+
 #about us
 @app.route('/aboutus')
 def aboutus():
     return render_template('AboutUs.html')
+
 #adoption form
 @app.route('/adoptionform')
 def adoptionform():
@@ -148,7 +163,7 @@ def get_filtered_petIDs(petType, breed, age, size, gender, color):
     
     return petIDSet;
 
-#cat page
+#search page for cats, the URL queries can be ommited 
 @app.route('/cats')
 def catpage():
     petType = 'Cat'
@@ -165,7 +180,7 @@ def catpage():
     
     return render_template('CatPage.html', petIDSet=petIDSet, petType=petType, breed=breed, age=age, size=size, gender=gender, color=color)
 
-#dog page
+#search page for dogs, the URL queries can be ommited 
 @app.route('/dogs')
 def dogpage():
     petType = 'Dog'
