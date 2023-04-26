@@ -46,7 +46,11 @@
     </head>
     <body>
         <header>
-            <h1 class="title">FurEver Pet <img src="static/logo.png" width=25px height=25px/></h1>
+            <h1 class="title">
+                <span id="home">FurEver Pet 
+                    <img src="static/logo.png" width=25px height=25px/>
+                </span>
+            </h1>
             <nav>
                 <a class="nav-anchor" href="aboutus">About Us</a>
                 <!--<a class="nav-anchor" href="cats">Cats</a>
@@ -91,5 +95,10 @@
         <footer>
             <h4 class="title">©2023 FurEver.com All trademarks are owned by Fantastic Four.</h4>
         </footer>
+        <script>
+        document.getElementById('home').addEventListener('click', () => {
+            window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + '/';
+        });
+        </script>
     </body>
 </html>
