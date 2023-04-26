@@ -122,6 +122,15 @@ This repository contains the following files and directories:
     - This 'README.md' is the main documentation describing overview of this project.
     - 'Furever.py' is the main source code for the project. It uses Python as a programming language.
 10. Link to Public Deployment (https://fureverpet.onrender.com/)
+    - This website has following website to cover:
+        1. '/' -- Homepage, the entry of Furever Pet
+        2. '/aboutus' -- About the authors, mission statement, privacy policy, and the contact information
+        3. '/adoptionform' -- provides a real adpotion form to simulate the adoption process
+        4. '/contact' -- adds new contacts to the "Contact" table in the database, update the User Information page
+        5. '/cats' -- the search and display tool to retrieve cats with user-selected cat features 
+        6. '/dogs' -- the search and display tool to retrieve cats with user-selected dog features
+        7. '/cat_*' -- individual cat pages
+        8. '/dog_*' -- individual dog pages
 
 ## Getting Started
 
