@@ -95,7 +95,7 @@ This repository contains the following files and directories:
     |--- |--- |--- |
     | Furever.db || SQLite database for the Furever project |
     | sql.py || Python file containing SQL-related functions |
-    | Furever.py || project code for Flask app with calls to **prefix.py** |
+    | Furever.py || Project code for Flask app with calls to **prefix.py** |
     | static ||Directory with files needed for page display |
     | &nbsp;&nbsp;&nbsp; style.css || CSS file for styling the webpages |
     | &nbsp;&nbsp;&nbsp; searchPage.js || JavaScript file for search functionality on the page |
