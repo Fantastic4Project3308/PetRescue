@@ -111,7 +111,7 @@ This repository contains the following files and directories:
     | Test_Queries.py || Python file for testing SQL queries |
     | Test_Tables.py || Python file for testing SQL tables |
     | setup.cmds || Commands to setup a shell to run a Flask app |
-    | wsgi.py || commands to setup a shell to deploy at Render.com |
+    | wsgi.py || Commands to setup a shell to deploy at Render.com |
     | prefix.py || Flask app containing routines needed to run web service |
     | requirements.txt || Text file with required Python packages for the project for the public deployment |
     | WebsiteDesign || Directory including design drafts from Milestone 2-4 |
