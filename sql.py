@@ -1,15 +1,22 @@
 #!/usr/bin/python3
+
+#===============================================================================
+#Title: sql application
+#Description: Creates dog and cat tables in database "Furever.db" and inserts 
+#information for each dog and cat for adoption into tables
+#Date: Apr 2023
+#===============================================================================
 import sqlite3
 
 #connecting to database
 conn = sqlite3.connect('Furever.db')
 c= conn.cursor()
 
-#creating cat table
+#creating cat table with attributes name, description, breed, age, gender, color, size, and location
 c.execute("DROP TABLE IF EXISTS Cat")
 c.execute("Create table Cat(id int, name varchar(45), description varchar(1000), breed varchar(20), age float, gender varchar(10),color varchar(10),size varchar(10), location varchar(10), primary key (id));")
 
-#creating dog table
+#creating dog table name, description, breed, age, gender, color, size, and location
 c.execute("DROP TABLE IF EXISTS Dog")
 c.execute("Create table Dog(id int, name varchar(45), description varchar(1000), breed varchar(20), age float, gender varchar(10),color varchar(10),size varchar(10), location varchar(10), primary key (id));")
 
@@ -245,7 +252,7 @@ dog15_dict = {
     'location': 'Dog Kennels'
 }
 
-#inserting dictionary information into cat tables
+#inserting dictionary information into cat tables (5 in total)
 c.execute("INSERT INTO Cat (id, name, description, breed, age, gender, color, size, location) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
           (cat_51289679_dict['id'], cat_51289679_dict['name'], cat_51289679_dict['description'], cat_51289679_dict['breed'], cat_51289679_dict['age'], cat_51289679_dict['gender'], cat_51289679_dict['color'], cat_51289679_dict['size'], cat_51289679_dict['location']))
 
@@ -262,7 +269,7 @@ c.execute("INSERT INTO Cat (id, name, description, breed, age, gender, color, si
           (cat_5_dict['id'], cat_5_dict['name'], cat_5_dict['description'], cat_5_dict['breed'], cat_5_dict['age'], cat_5_dict['gender'], cat_5_dict['color'], cat_5_dict['size'], cat_5_dict['location']))
 
 
-#inserting dictionary information into dog tables
+#inserting dictionary information into dog tables(10 in total)
 c.execute("INSERT INTO Dog (id, name, description, breed, age, gender, color, size, location) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
           (dog1_dict['id'], dog1_dict['name'], dog1_dict['description'], dog1_dict['breed'], dog1_dict['age'], dog1_dict['gender'], dog1_dict['color'], dog1_dict['size'], dog1_dict['location']))
 
@@ -309,7 +316,7 @@ c.execute("INSERT INTO Dog (id, name, description, breed, age, gender, color, si
           (dog15_dict['id'], dog15_dict['name'], dog15_dict['description'], dog15_dict['breed'], dog15_dict['age'], dog15_dict['gender'], dog15_dict['color'], dog15_dict['size'], dog15_dict['location']))
 
 
-#to go into test file
+#tests that all have been inserted correctly into table
 try:
     c.execute("select * from Cat")
     myresult = c.fetchall()
