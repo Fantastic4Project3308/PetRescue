@@ -198,7 +198,7 @@ Zack - reasearch why the css is not rendering when we run webpage with Flask. It
 #### Backend
 No obstacles this week.
 
-# Week 10 (Start of Sprint 3)
+# Week 10
 ## Meeting 1 Wednesday 4/19
 #### Frontend
 <br>
@@ -213,7 +213,7 @@ No obstacles this week.
 * Created route '/contact' to to capture data from adoption form once form 
 <br>
 <img src="Wk10_BackEnd.png" alt="Wk10BackEnd" WIDTH=50% ALIGH="LEFT"/>
-#### Goals for next week
+#### Goals for Friday
 * Add animal ID to pull down list 
 * Add mailto on adaptionform the page
 * Complete all drop down selections for cat and dog search pages so that it can load animal based on preferences
@@ -256,5 +256,27 @@ No obstacles this week.
 ### Obstacles
 #### Backend
 * Britteny - figure our how to make Furever.py up and running on Render.com (made wsgi.py and requirements.txt)
+
+# Week 11
+## Meeting Wednesday 4/26 (End of Sprint 3)
+#### Frontend
+* Code clean up/ final check for all functionality
+* Enabled filtering on DOg and Cat pages
+* This marks end of sprint 3
+
+#### Backend
+<br>
+<img src="Wk11_BackEnd.png" alt="Wk11BackEnd" WIDTH=50% ALIGH="LEFT"/><br>
+* Completed all front end goals from last meeting
+* This marks end of sprint 3
+
+#### Deployment/ Documentation
+* Documentation started for Milestone 7 and 8
+
+#### Goals for Friday
+* Start Sprint 4 (final sprint) - work on slide deck for group presentation (milestone 7) and assign slides
+
+### Obstacles
+No obstacles
 
 
