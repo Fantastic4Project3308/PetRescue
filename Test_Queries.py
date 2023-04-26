@@ -3,6 +3,9 @@
 # The functions in Furever.py were used to render the information on the website. 
 # Table contents have already been tested in Test_tables.py 
 
+####### IMPORTANT ####### Be sure to activate virtual environment before running this test file. See installation instructions at https://flask.palletsprojects.com/en/2.2.x/installation/.
+# To run use: python -m unittest -v  Test_Queries.py
+
 import sqlite3
 from Furever import app
 import unittest
@@ -51,7 +54,7 @@ def test_dog_366(db_name):
     assert expected_location.encode() in response.data
     
     # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/dog_36636186') matched as expected.")
+    print("test_dog_366: Test passed - Data used to render @app.route('/dog_36636186') matched as expected.")
 
 # Call the function with the name of the database file
 test_dog_366('Furever.db')
@@ -96,7 +99,7 @@ def test_dog_429(db_name):
     assert expected_location.encode() in response.data
     
     # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/dog_42904054') matched as expected.")
+    print("test_dog_429: Test passed - Data used to render @app.route('/dog_42904054') matched as expected.")
 
 # Call the function with the name of the database file
 test_dog_429('Furever.db')
@@ -141,7 +144,7 @@ def test_dog_430(db_name):
     assert expected_location.encode() in response.data
     
      # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/dog_43078721') matched as expected.")
+    print("test_dog_430: Test passed - Data used to render @app.route('/dog_43078721') matched as expected.")
 
 # Call the function with the name of the database file    
 test_dog_430('Furever.db')
@@ -186,7 +189,7 @@ def test_dog_454(db_name):
     assert expected_location.encode() in response.data
     
      # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/dog_45447002') matched as expected.")
+    print("test_dog_454: Test passed - Data used to render @app.route('/dog_45447002') matched as expected.")
 
 # Call the function with the name of the database file   
 test_dog_454('Furever.db')
@@ -231,7 +234,7 @@ def test_dog_488(db_name):
     assert expected_location.encode() in response.data
     
     # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/dog_48818187') matched as expected.")
+    print("test_dog_488: Test passed - Data used to render @app.route('/dog_48818187') matched as expected.")
 
 # Call the function with the name of the database file   
 test_dog_488('Furever.db')
@@ -276,7 +279,7 @@ def test_dog_5027(db_name):
     assert expected_location.encode() in response.data
     
     # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/dog_50272539') matched as expected.")
+    print("test_dog_5027: Test passed - Data used to render @app.route('/dog_50272539') matched as expected.")
 
 # Call the function with the name of the database file   
 test_dog_5027('Furever.db')
@@ -321,7 +324,7 @@ def test_dog_515(db_name):
     assert expected_location.encode() in response.data
     
     # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/dog_51599202') matched as expected.")
+    print("test_dog_515: Test passed - Data used to render @app.route('/dog_51599202') matched as expected.")
 
 # Call the function with the name of the database file   
 test_dog_515('Furever.db')
@@ -366,7 +369,7 @@ def test_dog_519(db_name):
     assert expected_location.encode() in response.data
     
     # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/dog_51962699') matched as expected.")
+    print("test_dog_519: Test passed - Data used to render @app.route('/dog_51962699') matched as expected.")
 
 # Call the function with the name of the database file   
 test_dog_519('Furever.db')
@@ -411,7 +414,7 @@ def test_dog_5200(db_name):
     assert expected_location.encode() in response.data
     
     # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/dog_52006141') matched as expected.")
+    print("test_dog_5200: Test passed - Data used to render @app.route('/dog_52006141') matched as expected.")
 
 # Call the function with the name of the database file   
 test_dog_5200('Furever.db')
@@ -456,7 +459,7 @@ def test_dog_5205(db_name):
     assert expected_location.encode() in response.data
     
     # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/dog_52053831') matched as expected.")
+    print("test_dog_5205: Test passed - Data used to render @app.route('/dog_52053831') matched as expected.")
 
 # Call the function with the name of the database file  
 test_dog_5205('Furever.db')
@@ -501,7 +504,7 @@ def test_dog_5208(db_name):
     assert expected_location.encode() in response.data
     
     # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/dog_52086329') matched as expected.")
+    print("test_dog_5208: Test passed - Data used to render @app.route('/dog_52086329') matched as expected.")
 
 # Call the function with the name of the database file   
 test_dog_5208('Furever.db')
@@ -546,7 +549,7 @@ def test_dog_5085(db_name):
     assert expected_location.encode() in response.data
     
     # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/dog_50858047') matched as expected.")
+    print("test_dog_5085: Test passed - Data used to render @app.route('/dog_50858047') matched as expected.")
 
 # Call the function with the name of the database file   
 test_dog_5085('Furever.db')
@@ -591,7 +594,7 @@ def test_dog_52129288(db_name):
     assert expected_location.encode() in response.data
     
     # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/dog_52129288') matched as expected.")
+    print("test_dog_52129288: Test passed - Data used to render @app.route('/dog_52129288') matched as expected.")
 
 # Call the function with the name of the database file  
 test_dog_52129288('Furever.db')
@@ -636,7 +639,7 @@ def test_dog_52129291(db_name):
     assert expected_location.encode() in response.data
     
     # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/dog_52129291') matched as expected.")
+    print("test_dog_52129291: Test passed - Data used to render @app.route('/dog_52129291') matched as expected.")
 
 # Call the function with the name of the database file  
 test_dog_52129291('Furever.db')
@@ -679,7 +682,7 @@ def test_dog_520919(db_name):
     assert expected_location.encode() in response.data
     
     # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/dog_52091971') matched as expected.")
+    print("test_dog_520919: Test passed - Data used to render @app.route('/dog_52091971') matched as expected.")
 
 # Call the function with the name of the database file   
 test_dog_520919('Furever.db')
@@ -727,7 +730,7 @@ def test_cat_512(db_name):
     assert expected_location.encode() in response.data
     
     # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/cat_51289678') matched as expected.")
+    print("test_cat_512: Test passed - Data used to render @app.route('/cat_51289678') matched as expected.")
 
 # Call the function with the name of the database file   
 test_cat_512('Furever.db')
@@ -772,7 +775,7 @@ def test_cat_520(db_name):
     assert expected_location.encode() in response.data
     
     # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/cat_52058185') matched as expected.")
+    print("test_cat_520: Test passed - Data used to render @app.route('/cat_52058185') matched as expected.")
 
 # Call the function with the name of the database file    
 test_cat_520('Furever.db')
@@ -817,7 +820,7 @@ def test_cat_5207(db_name):
     assert expected_location.encode() in response.data
     
     # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/cat_52072231') matched as expected.")
+    print("test_cat_5207: Test passed - Data used to render @app.route('/cat_52072231') matched as expected.")
 
 # Call the function with the name of the database file    
 test_cat_5207('Furever.db')
@@ -862,7 +865,7 @@ def test_cat_521(db_name):
     assert expected_location.encode() in response.data
     
     # Print a message indicating that the test passed
-    print("Test passed - Data used to render @app.route('/cat_52106194') matched as expected.")
+    print("test_cat_521: Test passed - Data used to render @app.route('/cat_52106194') matched as expected.")
 
 # Call the function with the name of the database file    
 test_cat_521('Furever.db')
@@ -906,7 +909,7 @@ def test_cat_5216(db_name):
     
     # Print a message indicating that the test passed
 
-    print("Test passed - Data used to render @app.route('/cat_52167059') matched as expected.")
+    print("test_cat_5216: Test passed - Data used to render @app.route('/cat_52167059') matched as expected.")
 
 # Call the function with the name of the database file     
 test_cat_5216('Furever.db')
@@ -963,17 +966,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input1 - expected output: {expected_output}")
+        #print(f"test_valid_input1 - expected output: {expected_output}")
 
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input1 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input1 - result from get_filtered_petIDs: {result}")
 
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input1: Test passed - Data rendered on webpage matches database as expected")
 
         # Close the database connection
         conn.close()
@@ -1018,17 +1021,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input2 - expected output: {expected_output}")
+        #print(f"test_valid_input2 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input2 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input2 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input2: Test passed - Data rendered on webpage matches database as expected")
         
         # Close the database connection
         conn.close()     
@@ -1073,17 +1076,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input3 - expected output: {expected_output}")
+        #print(f"test_valid_input3 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input3 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input3 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input3: Test passed - Data rendered on webpage matches database as expected")
         
         # Close the database connection
         conn.close()  
@@ -1128,17 +1131,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input4 - expected output: {expected_output}")
+        #print(f"test_valid_input4 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input4 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input4 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input4: Test passed - Data rendered on webpage matches database as expected")
         
         # Close the database connection
         conn.close() 
@@ -1183,17 +1186,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input5 - expected output: {expected_output}")
+        #print(f"test_valid_input5 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input5 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input5 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input5: Test passed - Data rendered on webpage matches database as expected")
         
         # Close the database connection
         conn.close() 
@@ -1241,17 +1244,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input6 - expected output: {expected_output}")
+        #print(f"test_valid_input6 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input6 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input6 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input6: Test passed - Data rendered on webpage matches database as expected")
         
         # Close the database connection
         conn.close() 
@@ -1296,17 +1299,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input7 - expected output: {expected_output}")
+        #print(f"test_valid_input7 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input7 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input7 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input7: Test passed - Data rendered on webpage matches database as expected")
         
         # Close the database connection
         conn.close() 
@@ -1333,17 +1336,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_no_filters_selected1 - expected output: {expected_output}")
+        #print(f"test_no_filters_selected1 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with no filter criteria
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_no_filters_selected1 - result from get_filtered_petIDs: {result}")
+            #print(f"test_no_filters_selected1 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_no_filters_selected1: Test passed - Data rendered on webpage matches database as expected")
         
         # Close the database connection
         conn.close() 
@@ -1388,17 +1391,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input_that_returns_empty_set_of_Ids1 - expected output: {expected_output}")
+        #print(f"test_valid_input_that_returns_empty_set_of_Ids1 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input_that_returns_empty_set_of_Ids1 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input_that_returns_empty_set_of_Ids1 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input_that_returns_empty_set_of_Ids1: Test passed - Data rendered on webpage matches database as expected")
         
         # Close the database connection
         conn.close()  
@@ -1443,17 +1446,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input_that_returns_empty_set_of_Ids2 - expected output: {expected_output}")
+        #print(f"test_valid_input_that_returns_empty_set_of_Ids2 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input_that_returns_empty_set_of_Ids2 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input_that_returns_empty_set_of_Ids2 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input_that_returns_empty_set_of_Ids2")
 
             
 ###############################################################################################
@@ -1507,17 +1510,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input8 - expected output: {expected_output}")
+        #print(f"test_valid_input8 - expected output: {expected_output}")
 
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input8 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input8 - result from get_filtered_petIDs: {result}")
 
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input8: Test passed - Data rendered on webpage matches database as expected")
 
         # Close the database connection
         conn.close()
@@ -1562,17 +1565,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input9 - expected output: {expected_output}")
+        #print(f"test_valid_input9 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input9 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input9 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input9: Test passed - Data rendered on webpage matches database as expected")
         
         # Close the database connection
         conn.close()     
@@ -1617,17 +1620,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input10 - expected output: {expected_output}")
+        #print(f"test_valid_input10 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input10 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input10 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input10: Test passed - Data rendered on webpage matches database as expected")
         
         # Close the database connection
         conn.close()  
@@ -1672,17 +1675,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input11 - expected output: {expected_output}")
+        #print(f"test_valid_input11 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input11 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input11 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input11: Test passed - Data rendered on webpage matches database as expected")
         
         # Close the database connection
         conn.close() 
@@ -1727,17 +1730,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input12 - expected output: {expected_output}")
+        #print(f"test_valid_input12 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input12 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input12 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input12: Test passed - Data rendered on webpage matches database as expected")
         
         # Close the database connection
         conn.close() 
@@ -1785,17 +1788,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input13 - expected output: {expected_output}")
+        #print(f"test_valid_input13 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input13 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input13 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input13: Test passed - Data rendered on webpage matches database as expected")
         
         # Close the database connection
         conn.close() 
@@ -1840,17 +1843,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input14 - expected output: {expected_output}")
+        #print(f"test_valid_input14 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input14 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input14 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input14: Test passed - Data rendered on webpage matches database as expected")
         
         # Close the database connection
         conn.close() 
@@ -1877,17 +1880,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_no_filters_selected2 - expected output: {expected_output}")
+        #print(f"test_no_filters_selected2 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with no filter criteria
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_no_filters_selected2 - result from get_filtered_petIDs: {result}")
+            #print(f"test_no_filters_selected2 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_no_filters_selected2: Test passed - Data rendered on webpage matches database as expected")
         
         # Close the database connection
         conn.close() 
@@ -1932,17 +1935,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input_that_returns_empty_set_of_Ids3 - expected output: {expected_output}")
+        #print(f"test_valid_input_that_returns_empty_set_of_Ids3 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input_that_returns_empty_set_of_Ids3 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input_that_returns_empty_set_of_Ids3 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input_that_returns_empty_set_of_Ids3: Test passed - Data rendered on webpage matches database as expected")
         
         # Close the database connection
         conn.close()  
@@ -1987,17 +1990,17 @@ class TestGetFilteredPetIDs(unittest.TestCase):
         c.execute(query, params)
         sql_output = c.fetchall()
         expected_output = set([x[0] for x in sql_output])
-        print(f"test_valid_input_that_returns_empty_set_of_Ids4 - expected output: {expected_output}")
+        #print(f"test_valid_input_that_returns_empty_set_of_Ids4 - expected output: {expected_output}")
         
         # Use a test request context to simulate a GET request to the website with the filter criteria as URL parameters
         with app.test_request_context('/?petType={}&breed={}&age={}&size={}&gender={}&color={}'.format(
                 petType, breed, age, size, gender, color)):
             # Call the get_filtered_petIDs function with the filter criteria and store the result in a variable
             result = get_filtered_petIDs(petType, breed, age, size, gender, color)
-            print(f"test_valid_input_that_returns_empty_set_of_Ids4 - result from get_filtered_petIDs: {result}")
+            #print(f"test_valid_input_that_returns_empty_set_of_Ids4 - result from get_filtered_petIDs: {result}")
             
             # Check that the result matches the expected output
-            self.assertEqual(result, expected_output)
+            self.assertEqual(result, expected_output, "test_valid_input_that_returns_empty_set_of_Ids4: Test passed - Data rendered on webpage matches database as expected")
              
 if __name__ == '__main__':
     unittest.main()
