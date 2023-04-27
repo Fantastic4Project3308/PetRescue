@@ -84,6 +84,8 @@ This repository contains the following files and directories:
     ├── wsgi.py
     ├── prefix.py  <== cloned, original from Lab 6 assignment
     ├── requirements.txt
+    ├── PetData
+    │   └──  . . .
     ├── WebsiteDesign
     │   └──  . . .
     ├── WeeklyStatus
@@ -114,6 +116,7 @@ This repository contains the following files and directories:
     | wsgi.py || Commands to setup a shell to deploy at Render.com |
     | prefix.py || Flask app containing routines needed to run web service |
     | requirements.txt || Text file with required Python packages for the project for the public deployment |
+    | PetData || Directory including the web scraping scripts and all aniamal source data from Petango for sql.py |
     | WebsiteDesign || Directory including design drafts from Milestone 2-4 |
     | WeeklyStatus || Directory including weekly activity reports and minutes |
     | README.md | | General information about this project|
