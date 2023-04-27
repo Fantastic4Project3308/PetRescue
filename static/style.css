@@ -1,3 +1,9 @@
+/*
+* /static/style.css is the major source file to control the visual presentation for all web pages on FurEver Pet.
+* Please note that this file only provides the general css rules, it doesn't include every css rules applied
+* to every part of every pages, some of them have additional customized css rules within their HTML 
+* <style></style> innerHTML.
+*/
 * {
      box-sizing: border-box;
 }
