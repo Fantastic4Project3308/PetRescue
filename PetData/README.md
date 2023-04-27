@@ -15,7 +15,7 @@ Our web scraping source petango.com is no longer available. "Petango has been ad
   - /Cat/AttributeHTML/*_attributes.html
   - /Dog/AttributeHTML/*_attributes.html
   
-#### How does it work? Let's scrap a dog profile from Petago for example:
+#### How does it work? Let's go through a step-by-step to scrape a dog profile from Petago for example:
   1. Launch a Bash(Unix shell), then make sure your current path is under `/PetData`.
   2. run `./get_pets_list.sh dog`; the script shall return "Number of dogs' name-id-subURL extracted: 32" "Extraction completed.", else it shall return an error message.
   3. You shall see a dog_name_id_subURL_list.txt under the current path. This text file contains many lines of scraped dog IDs, names, and URLs. Each line is surrounded by HTML <div></div>
