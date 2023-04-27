@@ -71,7 +71,8 @@ This repository contains the following files and directories:
     │   ├── (png files)
     │   └──  petImages 
     │── templates
-    │   ├── AboutUs.html
+    │   ├── HomePage.html
+    |   ├── AboutUs.html
     │   ├── AdaptionForm.html
     │   ├── CatPage.html
     │   ├── DogPage.html
@@ -104,6 +105,7 @@ This repository contains the following files and directories:
     | &nbsp;&nbsp;&nbsp; (png files) || Various PNG files used in the project |
     | &nbsp;&nbsp;&nbsp; petImages || Directory with images for dogs and cats |
     | templates || Directory with template HTML for rendering test pages|
+    | &nbsp;&nbsp;&nbsp; HomePage.html || HTML file for home page |
     | &nbsp;&nbsp;&nbsp; AboutUs.html || HTML file for About Us page |
     | &nbsp;&nbsp;&nbsp; AdaptionForm.html || HTML file for Adoption Form page |
     | &nbsp;&nbsp;&nbsp; CatPage.html || HTML file for Cat Page |
