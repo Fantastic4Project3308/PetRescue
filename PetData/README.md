@@ -5,9 +5,9 @@ Our web scraping source petango.com is no longer available. "Petango has been ad
 #### Web Scraping bash Scripts:
   - get_pet_profile_html.sh
   - get_pets_list.sh
-  - petattrributes.sh
-  - /Cat/AttributeHTML/catatt.sh
-  - /Dog/AttributeHTML/petatt.sh
+  - ~~petattrributes.sh~~ no longer used legacy script, please use catatt.sh or petatt.sh instead
+  - /Cat/AttributeHTML/catatt.sh -- same as petatt.sh
+  - /Dog/AttributeHTML/petatt.sh -- same as catatt.sh
 
 #### Auxiliary Files:
   - cat_name_id_subURL_list.txt
