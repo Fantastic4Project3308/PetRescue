@@ -50,7 +50,7 @@ Access our Trello board [here](https://trello.com/w/fantasticfour82).
     * Created webdesign HTML template, CSS style, for all pages
     * Collected free images from webscraping for animals and logos
     * Created javascript to enable links between pages
-    * Using javascript to send a request to backend to rerender search results
+    * Used javascript to send a request to backend to rerender search results
     * See below for a couple of screenshots of our website 
     <br>
     <img src="static/finalreport_Images/homepage.png" alt="Homepage" WIDTH=30% ALIGH="LEFT"/>
