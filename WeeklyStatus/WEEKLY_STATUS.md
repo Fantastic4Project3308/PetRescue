@@ -279,4 +279,13 @@ No obstacles this week.
 ### Obstacles
 No obstacles
 
+## Meeting Wednesday 4/28 (Start sprint 4)
+* comment HTML - DONE
+* comment SQL.py - DONE
+* comment bash scripts - DONE
+
+Our website is done. THe remaining work is the slide deck for our group presentation and demo video. We also need to finish the final readme.
+
+### Obstacles
+No obstacles
 
