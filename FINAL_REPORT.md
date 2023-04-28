@@ -47,7 +47,7 @@ Access our Trello board [here](https://trello.com/w/fantasticfour82).
     * Created `cat`, `dog` and `contact` tables 
     * Used the tables to dynamically insert into webpages
   * Frontend (HTML/ CSS/ Javascript)
-    * Created webdesign template, css style, for all pages
+    * Created webdesign HTML template, CSS style, for all pages
     * Collected free images from webscraping for animals and logos
     * Created javascript to enable links between pages
     * Using javascript to send a request to backend to rerender search results
