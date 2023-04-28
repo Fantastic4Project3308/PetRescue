@@ -9,7 +9,7 @@
 # '/' -- Homepage, the entry of Furever Pet
 # '/aboutus' -- About the authors, mission statement, privacy policy, and the contact information
 # '/adoptionform' -- provides a real adpotion form to simulate the adoption process
-# '/contact' -- adds new contacts to the "Contact" table in the database, update the User Information page
+# '/contacts' -- adds new contacts to the "Contact" table in the database, update the User Information page
 # '/cats' -- the search and display tool to retrieve cats with user-selected cat features 
 # '/dogs' -- the search and display tool to retrieve cats with user-selected dog features
 # '/cat_*' -- individual cat pages
