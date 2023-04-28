@@ -131,7 +131,7 @@ This repository contains the following files and directories:
         1. '/' -- Homepage, the entry of Furever Pet
         2. '/aboutus' -- About the authors, mission statement, privacy policy, and the contact information
         3. '/adoptionform' -- provides a real adpotion form to simulate the adoption process
-        4. '/contact' -- adds new contacts to the "Contact" table in the database, update the User Information page
+        4. '/contacts' -- adds new contacts to the "Contact" table in the database, update the User Information page
         5. '/cats' -- the search and display tool to retrieve cats with user-selected cat features 
         6. '/dogs' -- the search and display tool to retrieve cats with user-selected dog features
         7. '/cat_*' -- individual cat pages
