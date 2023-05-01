@@ -89,6 +89,7 @@ This repository contains the following files and directories:
     │   └──  . . .
     ├── WebsiteDesign
     │   └──  . . .
+    ├── Demo.mp4
     ├── WeeklyStatus
     │   └── . . . 
     └── README.md <== YOU ARE HERE
@@ -120,6 +121,7 @@ This repository contains the following files and directories:
     | requirements.txt || Text file with required Python packages for the project for the public deployment |
     | PetData || Directory including the web scraping scripts and all aniamal source data from Petango for sql.py |
     | WebsiteDesign || Directory including design drafts from Milestone 2-4 |
+    | Demo.mp4 || Product demo video (5 min) |
     | WeeklyStatus || Directory including weekly activity reports and minutes |
     | README.md | | General information about this project|
     <br>
