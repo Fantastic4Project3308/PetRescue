@@ -6,10 +6,11 @@
 * Mayumi Shimobe - Mayumi-GT - mash8545@colorado.edu
 * Zack Cheng - zacktcheng - tsch3115@colorado.edu
 
-# Project tracker link (Instructor can access)
+# Project tracker link
 Access our Trello board [here](https://trello.com/w/fantasticfour82).
 
-# Link to 5 minute video: a demo for a potential customer (could be same one you used in the presentation)
+# Link to 5 minute video: a demo for a potential customer
+Access our a demo video [here](/Demo.mp4)
 
 # Version control repository link
 * Access out GItHub repositoty commit history [here](https://github.com/Fantastic4Project3308/PetRescue/commits/main)
