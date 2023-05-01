@@ -57,7 +57,7 @@ This repository contains the following files and directories:
 4. [SQL TESTING](/SQL_TESTING.md)
 5. [FINAL REPORT](/FINAL_REPORT.md)
 6. Project presentation files from Milestone 5 (<b>link to be added</b>)
-7. Video of demo (<b>link to be added</b>)
+7. [Video of demo](/Demo.mp4)
 8. Source code and testing
     - Below shows related repository structure and description.
     ```
@@ -125,7 +125,7 @@ This repository contains the following files and directories:
     <br>
 9. Documentation
     - This 'README.md' is the main documentation describing overview of this project.
-    - 'Furever.py' is the main source code for the project. It uses Python as a programming language.
+    - 'Furever.py' is the main source code for the project. It uses Python as a programming language. 
 10. Link to Public Deployment (https://fureverpet.onrender.com/)
     - This website has following website to cover:
         1. '/' -- Homepage, the entry of Furever Pet
