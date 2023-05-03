@@ -56,7 +56,7 @@ This repository contains the following files and directories:
 3. [PAGE TESTING](/WebsiteDesign/MockUp/PAGE_TESTING.md)
 4. [SQL TESTING](/SQL_TESTING.md)
 5. [FINAL REPORT](/FINAL_REPORT.md)
-6. Project presentation files from Milestone 5 (<b>link to be added</b>)
+6. [Project presentation files from Milestone 5](/FinalPresentation.pdf)
 7. [Video of demo](/Demo.mp4)
 8. Source code and testing
     - Below shows related repository structure and description.
@@ -90,6 +90,7 @@ This repository contains the following files and directories:
     ├── WebsiteDesign
     │   └──  . . .
     ├── Demo.mp4
+    ├── FinalPresentation.pdf
     ├── WeeklyStatus
     │   └── . . . 
     └── README.md <== YOU ARE HERE
@@ -122,6 +123,7 @@ This repository contains the following files and directories:
     | PetData || Directory including the web scraping scripts and all aniamal source data from Petango for sql.py |
     | WebsiteDesign || Directory including design drafts from Milestone 2-4 |
     | Demo.mp4 || Product demo video (5 min) |
+    | FinalPresentation.pdf || Final presentation slides for Milestone 5|
     | WeeklyStatus || Directory including weekly activity reports and minutes |
     | README.md | | General information about this project|
     <br>
